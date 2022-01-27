@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
+/* PARAMÈTRES GÉNÉRAUX */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto" sans-serif;
+  box-sizing: border-box;
+}
+/* body{
+    font-family: 'Roboto' sans-serif;
+ } */
+main {
+  padding: 0 1rem;
+}
+section {
+  width: 100%;
+  /* margin: 0; */
+}
+ul {
+  list-style: none;
+}
+/* HEADER */
+.logo-header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid black;
+}
+/* section to-explor */
+#to-explor {
+  height: 100%;
+  text-align: center;
+}
+/* section fonctioning */
+
+#functioning {
+  /* width: 100%; */
+  /* display: inline-block; */
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  /* height: 100%; */
+  background-color: #f6f6f6;
+}
+#functioning ol {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* list-style-type: circle; */
+}
+
+.function-choose {
+  display: flex;
+  flex-direction: row;
+  /* width: 25em; */
+  /* flex: 1rem; */
+  padding: 2rem;
+  margin: 0.5rem;
+  position: relative;
+  background-color: crimson;
+}
+/******** restaurants ********************/
+#restaurants {
+  /* width: 100%; */
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  flex-wrap: wrap;
+  height: auto;
+  /* height: 600px; */
+  background-color: orange;
+}
+
+#restaurants a {
+  /* display: flex; */
+  /* width: 80%; */
+}
+
+.contener-restaurants {
+  display: flex;
+  /* flex-direction: row; */
+
+  /* width: 40%; */
+}
+.contener-restaurants a {
+  /* width: 300px; */
+  /* display: flex; */
+  /* height: 240px; */
+
+  /* display: flex; */
+  /* flex-direction: row;*/ 
+  background-color: blue; 
+}
+.contener-restaurants img{
+  width: 50%;
+}*/
+.a-ref-cards {
+  margin: 0;
+  /* width: 100%; */
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  /* align-items: center;*/
+  width: 350px;
+  /* background-color: red; */
+}
+.cards img {
+  width: 90%; 
+  /* width: 350px; */
+}
+
+.fig-designation h3 {
+  /* text-align: center; */
+  background-color: crimson;
+}
+/**************** La palette du gout **********************/
+
+#palette-du-gout img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* *************** La note enchantée **********************/
+
+#la-note-enchantee img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*********************** à la Française ********************/
+
+#a-la-francaise img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*********************** délices des sens *********************/
+#delices-des-sens img{
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+
+
+/************************* footer ***********************************/
+
+footer {
+  /* height: 8rem; */
+  color: #fff;
+  background-color: #020202;
+}
+.logo-footer {
+  font-family: "Shrikhand", cursive;
+}
+.logo-footer,
+ul {
+  font-family: "Roboto" sans-serif;
+  padding-left: 0;
+  /* margin-left: 2rem; */
+}
