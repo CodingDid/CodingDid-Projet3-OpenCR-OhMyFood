@@ -4,107 +4,157 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
+    
+    <script src="https://kit.fontawesome.com/77b0e621d5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </link> 
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css`" /> -->
     <title>Oh my Food-Accueil</title>
   </head>
   <body>
-    <main>
-      <header>
-        <h1 class="logo-header">ohmyfood</h1>
-      </header>
-      <section id="to-explor">
-        <div>
-          <p><i></i> Paris, Belleville</p>
-          <h2>
-            Réservez le menu qui <br />
-            vous convient
-          </h2>
-          <p>
-            Découvrez des restaurants d'exeption,<br />
-            sélectionnés par nos soins
-          </p>
-          <button>Explorer nos restaurants</button>
-        </div>
-      </section>
+    <main> <!--main pourrait être situé apres la balise de fermeture   header-->
+    <header>
+      <h1 class="logo-entete">ohmyfood</h1>
+    </header>
+        <section id="explorer-restaurants">
+          <div>
+            <p><i class="fa-solid fa-location-dot"></i>Paris,  Belleville</p>
+            <h2>
+              Réservez le menu qui <br />
+              vous convient
+            </h2>
+            <p>
+              Découvrez des restaurants d'exception,<br />
+              sélectionnés par nos soins
+            </p>
+          <!-- <div id="button-explorer">
+              Explorer nos restaurants
+          </div> -->
+            <button id="button-explorer">Explorer nos restaurants</ button> 
+          </div>
+        </section>
       
-      <section id="functioning">
-        <div id="contener-f">
-          <h2>Fonctionnement</h2>
-          <ol>
-            <li class="function-choose">
-              <span>Choisissez un restaurant</span>
-            </li>
-            <li class="function-choose"><span>Composez votre menu</span></li>
-            <li class="function-choose"><span>Dégustez au restaurant</span></li>
-          </ol>
+        <section id="fonctionnement">
+            <div id="contenereur-F">
+                <h2>Fonctionnement</h2>
+                <ul>
+              <div id="puces1">
+                <i class="fa-solid fa-circle"></i>
+            </div>
+              <li class="fonction-choix">
+                <i class="fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span>
+                </li>
+                
+                <div id="puces2">
+                    <i class="fa-solid fa-circle"></i>
+                  </div>
+                <li class="fonction-choix"><i class="fa-solid fa-list-ul"></i><span>Composez votre menu</span></li>
+                
+                <div id="puces3">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+                  <li class="fonction-choix"><i class="fa-solid fa-store"></i><span>Dégustez au restaurant</span></li>
+            </ul>
         </div>
-      </section>
+        </section>
 
       <!-- ----------------- RESTAURANTS --------------------- -->
-      <section id="restaurants">
-        <div class="contener-restaurants">
+        <section id="contener-restaurants">
+          <div>
+          <div id="h2-resto">  
+            <h2>Restaurants</h2>
+          </div>
           <a href="la-palette-du-gout.html" class="a-ref-cards">
-          <figure class="cards">
+            <figure class="figure-card">
+              <img  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt=""/>
+              <span>nouveau</span>
+              <figcaption class="figcap-flex"> 
+                  <div class="items"><h3>La palette du goût</h3>
+                  </div>
+                  <div class="items"><p>Ménilmontant</p>
+                    </div> 
+                    <div class="items"><i class="fa-regular fa-heart"></i></div>
+              </figcaption> 
+            </figure>
+          </a>
+          <!-- </div> -->
+          
+          <!-- <div class="contener-restaurants">  -->
+            <a href="la-note-enchantée.html" class="a-ref-cards">
+              <figure class="figure-card card2">
+                <img
+                src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="test"
+                />
+                <span>nouveau</span>
+                  <figcaption class="figcap-flex">
+                      <div class="items">
+                            <h3>La note enchantée </h3> 
+                        </div>
+                      <div class="items">
+                            <p>Charonne</p>
+                        </div>
+                      <div class="items"><i class="fa-regular fa-heart"></i></div>
+                </figcaption>
+            </figure>
+          </a>
+        <!-- </div>  -->
+
+        <!-- <div class="contener-restaurants"> -->  
+          <a href="a-la-francaise.html" class="a-ref-cards">
+          <figure class="figure-card">
               <img
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
                 alt=""
               />
-              <figcaption class="fig-designation">
-                  <h3>La palette du goût</h3>
-                  <p>Ménilmontant</p>
+              <figcaption class="figcap-flex">
+                  <div class="items">
+                  <h3>À la française</h3> 
+                  </div>
+                  <div class="items">
+                  <p>Cité Rouge</p>
+                  </div>
+                  <div class="items"><i class="fa-regular fa-heart"></i></div>
               </figcaption>
             </figure>
           </a>
-          </div>
+        <!-- </div>  -->
 
-        <div class="contener-restaurants">
-          <a href="la-note-enchantée.html" class="a-ref-cards">
-          <figure class="cards">
-              <img
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt=""
-              />
-              <figcaption></figcaption>
-            </figure>
-          </a>
-        </div> 
-
-        <div class="contener-restaurants">  
-          <a href="a-la-francaise.html" class="a-ref-cards">
-          <figure class="cards">
-              <img
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                alt=""
-              />
-              <figcaption></figcaption>
-            </figure>
-          </a>
-        </div> 
-
-        <div class="contener-restaurants">  
+        <!-- <div class="contener-restaurants">  -->
           <a href="les-delices-des-sens.html" class="a-ref-cards">
-          <figure class="cards">
+          <figure class="figure-card">
               <img
-                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt=""
               />
-              <figcaption></figcaption>
+              <figcaption class="figcap-flex">
+                <div class="items">
+                    <h3>La délice des sens</h3> 
+                </div>
+                <div class="items">
+                    <p>Folie-Méricourt</p>
+                </div>
+                <div class="items"><i class="fa-regular fa-heart"></i></div>
+              </figcaption>
             </figure>
           </a>
-        </div>
-      </section>
+        <!-- </div> --->
+        </section>
       
         <footer>
           <nav>
             <h3 class="logo-footer">ohmyfood</h3>
             <ul>
-              <li>Proposer un restaurant</li>
-              <li>Devenir partenaire</li>
+              <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+              <li><i class="fa-solid fa-handshake-angle fa-xs"></i>   Devenir partenaire</li>
               <li>Mentions légales</li>
               <li>Contact</li>
             </ul>
           </nav>
-
+        </footer>
       </section>
     </main>
   </body>

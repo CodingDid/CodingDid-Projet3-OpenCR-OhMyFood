@@ -1,172 +1,1139 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@100;200;300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
-/* PARAMÈTRES GÉNÉRAUX */
+/* PARAMÈTRES GÉNÉRAUX  */
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto" sans-serif;
   box-sizing: border-box;
+  /* background-color: rgba(0, 0, 255, 0.397); */
 }
-/* body{
-    font-family: 'Roboto' sans-serif;
- } */
 main {
-  padding: 0 1rem;
+  /* background-color: rgb(129, 212, 129); */
+  font-family: "Roboto", sans-serif;
 }
 section {
   width: 100%;
-  /* margin: 0; */
+  margin: 0;
 }
 ul {
   list-style: none;
 }
-/* HEADER */
-.logo-header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  font-size: 2rem;
-  border: 1px solid black;
-}
-/* section to-explor */
-#to-explor {
-  height: 100%;
-  text-align: center;
-}
-/* section fonctioning */
 
-#functioning {
-  /* width: 100%; */
-  /* display: inline-block; */
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  font-size: 1rem;
-  /* height: 100%; */
-  background-color: #f6f6f6;
+/* Couleurs Maquette */
+#primaire {
+  background-color: #9356DC;
 }
-#functioning ol {
+#secondaire {
+  background-color: #FF79DA;
+}
+#tertiaire {
+  background-color: #99E2D0;
+}
+/*********************** ENTÊTE Accueil *****************************/
+
+.retour {
+  /* display: flex; */
+  /* justify-content: center; */
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /* list-style-type: circle; */
+  /* margin-left: 40px;*/  
+  /* background-color: rgba(255, 127, 80, 0.342); */
+  /* border: 2px solid black; */
 }
-
-.function-choose {
-  display: flex;
-  flex-direction: row;
-  /* width: 25em; */
-  /* flex: 1rem; */
-  padding: 2rem;
-  margin: 0.5rem;
-  position: relative;
-  background-color: crimson;
-}
-/******** restaurants ********************/
-#restaurants {
-  /* width: 100%; */
-  display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  flex-wrap: wrap;
-  height: auto;
-  /* height: 600px; */
-  background-color: orange;
-}
-
-#restaurants a {
-  /* display: flex; */
-  /* width: 80%; */
-}
-
-.contener-restaurants {
-  display: flex;
-  /* flex-direction: row; */
-
-  /* width: 40%; */
-}
-.contener-restaurants a {
-  /* width: 300px; */
-  /* display: flex; */
-  /* height: 240px; */
-
-  /* display: flex; */
-  /* flex-direction: row;*/ 
-  background-color: blue; 
-}
-.contener-restaurants img{
-  width: 50%;
+.fa-arrow-left {
+  /* font-size: 30px; */
+  /* width: 5%;*/ 
+  color: black;
+  padding-right: 3rem;
+  margin-left: 5%;
+} 
+/*.retour h1 {
+  width: 100%;
 }*/
-.a-ref-cards {
-  margin: 0;
-  /* width: 100%; */
+.logo-entete {
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  text-align: center;
 }
-.cards {
+.logo-next{
+  width: 100%;
+  /* display: flex; */
+}
+.logo-entete-next {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* border: 1px solid black; */
+  font-family: "Shrikhand", cursive;
+  font-size: 2rem;
+  width: 100%;
+  text-align: start;
+}  
+
+/******************* Section Explorer Accueil ********************/
+#explorer-restaurants {
+  text-align: center;
+  background-color: #f0f0f0;
+  height: 24rem;
+  width: 100%;
+}
+
+#explorer-restaurants i {
+  margin-right: 2rem;
+}
+
+#explorer-restaurants p:nth-child(0n + 1) {
+  background-color: rgba(128, 128, 128, 0.061);
+  border-top: 4px solid rgba(128, 128, 128, 0.164);
+  height: 3rem;
+  padding-right: 2.5rem;
+  padding-top: 1.5rem;
+  /* background-color: rgba(0, 0, 255, 0.096); */
+}
+#explorer-restaurants h2 {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+#explorer-restaurants p:nth-child(n+2){
+  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 200;
+}
+#button-explorer {
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  background: linear-gradient(#FF79DA, #9356DC);
+  /* box-shadow: 5px 5px 2px 1px rgba(255, 255, 255, .2); */
+  border-radius: 2rem;
+  border:none;
+  color: white;
+  font-weight: bold;
+  height: 3.5rem;
+  margin-top: 1.8rem;
+  width: 14rem;
+  margin-left: auto;
+}
+
+/****************** section fonctionnement Accueille *****************/
+
+#fonctionnement {
+  /* background-color: #f6f6f6; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+}
+#fonctionnement,
+ul {
+  position: relative;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   flex-wrap: wrap;
-  /* align-items: center;*/
-  width: 350px;
-  /* background-color: red; */
+  font-style: normal;
+  margin: 0;
+  width: 95%;
+  /* align-items: center; */
+  /* list-style-type: circle; */
 }
-.cards img {
-  width: 90%; 
-  /* width: 350px; */
+#contenereur-F h2 {
+  margin-left: 5%;
+}
+#puces1 i{
+  position: absolute;
+  top: 12%;
+  left: -2%;
+  z-index: 1;
+  font-size: 30px;
+  color: #9356DC;
+  /* transform: translate(-2% -2%); */
+}
+#puces2 i{
+  position: absolute;
+  top: 45%;
+  left: -2%;
+  z-index: 1;
+  font-size: 30px;
+  color: #9356DC;
+}
+#puces3 i{
+  position: absolute;
+  top: 78%;
+  left: -2%;
+  z-index: 1;
+  font-size: 30px;
+  color: #9356DC;
+}
+.fonction-choix {
+  border-radius: 1.5rem;
+  background-color: rgb(219, 107, 129);
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 2rem;
+}
+.fonction-choix i{
+  margin-right: 20px;
 }
 
-.fig-designation h3 {
+/********************* Restaurants Accueil ***************************/
+
+#contener-restaurants {
+  /*display: flex; Break point à partir de Min 768 & Max 992px */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  /* width: 100%; */
+  background-color: #f0f0f0;
+} 
+#h2-resto {
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+  background-color: yellow;
+}
+#contener-restaurants a{
+  width: 90%;
+  padding-bottom: 0;
+  text-decoration: none;
+  color: black;
+}
+.figure-card {
+  /* align-items: flex-start; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  /* background-color: crimson; */
+  background-color: #fff;
+}
+
+.figure-card img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  object-position: bottom center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.figure-card span{
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  z-index: 1;
+  padding: 5px 12px 5px 12px;
+  text-transform: capitalize;
+  color: green;
+  background-color: #99E2D0;
+}
+.figure-card, .card2 img{
+  /* object-position: center; */
+  object-position: 62% 62%;
+}
+.figcap-flex{
+  width: 97%;
+  display: flex;
+  flex-flow: column wrap;
+  padding-left: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+  height: 13vh; /* A modifier lors du Break point media Query*/
+  /* align-content: space-between; */
+  /* background-color: #fff; */
+  /* margin: auto; */
+}  
+.figcap-flex h3, p {
+  padding-top: 3px;
+  line-height: 0.01;
+  /* margin-bottom: 20px; */
+  /* margin-left: 0.5rem; */
+}
+.figcap-flex i{
+  margin-left: 70%;
+  line-height: 2.2;
+  flex-wrap: nowrap;
+  font-size: 1.7rem;
+  color: rgba(128, 128, 128, 0.878)
+  /* font-weight: normal; */
+  /* margin-right: 1rem; */
+}
+.items{
+  width: 50%;
+  height: 2.5rem;
+  /* align-content: space-between; */
+  /* background-color: skyblue; */
+  /* border: 1px solid black; */
+}
+
+
+
+
+/********** Restaurant La palette du gout Fichier HTML **************/
+
+#palette-du-gout {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); */
+}
+#palette-du-gout img {
+  height: 50%;
+  object-fit: cover;
+  /* object-position: 40% 40%; */
+  /* object-position: center; */
+  width: 100%;
+}
+
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; */
+  top: 42vh;
+  width: 100%;
+  height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); */
+  z-index: 1;
+}
+#palette{
+  display: flex;
+  padding-top: 5%;
+  /* margin-left: 5%; */
+  margin-bottom: 5%;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  width: 100%;
+  
+  /* background-color: violet; */
+  border-radius: 3rem 3rem 0 0;
+}
+#gout{
+  display: flex;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 5%;
+  /* font-style: italic; */
+  font-family: "Shrikhand", cursive;
+  /* background-color: rgba(37, 37, 240, 0.472); */
+}
+
+#coeur{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8%;
+  width: 15%;
+  font-size: 1.5rem;
+  color: rgba(128, 128, 128, 0.878)
+}
+.entrees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.entrees p:first-child{
+  
+  align-items: flex-start;
+  text-transform: uppercase;
+  /* margin-left: 5%; */
+  /* margin-top: 0; */
+  width: 95%;
+  /* background-color: #fff; */
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.plats p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+.desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desserts p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+
+.menus-restaurants {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+  border-radius: 1rem;
+  display: flex;
+  margin-bottom: 5%;
+  word-wrap: normal;
+  height: 4.5rem;
+  width: 95%;
+}
+.menus-restaurants  i {
+  margin-left: 55%;
+}
+.menu-texte {
+  width: 90%;
+}
+.menu-texte h3, p{
+  margin-left: 3%;
+  line-height: 0.3;
+  /* margin: 0; */
+}
+
+/* .menu-prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  width: 20%;
+} */
+
+.button-command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border:none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0 4rem 0;
+  width: 20rem;
+  /* width: 150px; */
+}
+
+
+/**************** La note enchantée Fichier HTML *******************/
+
+#la-note-enchantee {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); */
+}
+
+#la-note-enchantee img {
+  height: 50%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; */
+  top: 42vh;
+  width: 100%;
+  height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); */
+  z-index: 1;
+}
+#la-note{
+  display: flex;
+  padding-top: 5%;
+  /* margin-left: 5%; */
+  margin-bottom: 5%;
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  width: 100%;
+  
+  /* background-color: violet; */
+  border-radius: 3rem 3rem 0 0;
+}
+#gout{
+  display: flex;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 5%;
+  /* font-style: italic; */
+  font-family: "Shrikhand", cursive;
+  /* background-color: rgba(37, 37, 240, 0.472); */
+}
+#coeur{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8%;
+  width: 15%;
+  font-size: 1.5rem;
+  color: rgba(128, 128, 128, 0.878)
+}
+.entrees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.entrees p:first-child{
+  
+  align-items: flex-start;
+  text-transform: uppercase;
+  /* margin-left: 5%; */
+  /* margin-top: 0; */
+  width: 95%;
+  /* background-color: #fff; */
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.plats p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+.desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desserts p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+
+.menus-restaurants {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+  border-radius: 1rem;
+  display: flex;
+  margin-bottom: 5%;
+  word-wrap: normal;
+  height: 4.5rem;
+  width: 95%;
+}
+.menus-restaurants  i {
+  margin-left: 55%;
+}
+.menu-texte {
+  width: 90%;
+}
+.menu-texte h3, p{
+  margin-left: 3%;
+  line-height: 0.3;
+  /* margin: 0; */
+}
+
+/* .menu-prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  width: 20%;
+} */
+
+.button-command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border:none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0 4rem 0;
+  width: 10rem;
+  /* width: 150px; */
+}
+
+
+
+/* **************************************************************** */
+/* ********************* Media Query Tablette ********************* */
+/* **************************************************************** */
+@media (min-width: 768px) and (max-width: 992px) {
+
+/******** Entête media query ***********/
+
+.logo-entete {
+  /* font-stretch: ultra-expanded; */
+  font-size: 3rem;
+  /* text-transform: uppercase; */
+}
+  /********* Exploration Restaurants Média **********/
+
+#explorer-restaurants p{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+
+#button-explorer{
+  width: 24rem;
+  text-transform: uppercase;
+} 
+
+#fonctionnement ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+  border: 2px solid slateblue;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+.fonction-choix{
+  height: auto;
+}
+
+#puces1 i{
+  /* position: absolute; */
+  top: 16%;
+  left: 2%;
+}
+#puces2 i{
+  /* position: absolute; */
+  top: 17%;
+  left: 53%;
+}
+#puces3 i{
+  /* position: absolute; */
+  top: 68%;
+  left: 26%;
+}
+/* ************ Galeries photos restaurants Média ***************/
+
+#contener-restaurants {
+  /* display: flex; */
+  /* flex-direction: column;  */
+  /* align-items: center; */
+  border: 2px solid orange;
+  flex-wrap: wrap; 
+}  
+
+/* #h2-resto h2{
+  flex-basis: 50%;
+  /* height: 40px; 
+}  */
+.figure-card {
+  /* display: flex;  */
+  /* flex-direction: column; */
+  border: 2px solid red;
+  /* width: 300px; */
+  margin-top: 2rem;
+  /* margin: 0; */
+  flex-wrap: wrap;
+  /* align-content: space-between; */
+  /* min-width: 45%; */
+  /* min-height: 45%; */
+}   
+.entrees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.entrees p:first-child{
+  
+  align-items: flex-start;
+  text-transform: uppercase;
+  /* margin-left: 5%; */
+  /* margin-top: 0; */
+  width: 95%;
+  /* background-color: #fff; */
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.plats p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+.desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desserts p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+
+.menus-restaurants {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+  border-radius: 1rem;
+  display: flex;
+  margin-bottom: 5%;
+  word-wrap: normal;
+  height: 4.5rem;
+  width: 95%;
+}
+.menus-restaurants  i {
+  margin-left: 55%;
+}
+.menu-texte {
+  width: 90%;
+}
+.menu-texte h3, p{
+  margin-left: 3%;
+  line-height: 0.3;
+  /* margin: 0; */
+}
+
+.menu-prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  width: 20%;
+}
+
+
+/* *********************** Media Footer ******************* */
+footer {
+  display: flex;
+  flex-direction: column;
+  /* width: 50%; */
+  /* margin: 0; */
+}  
+footer h3{
+  margin-top: 0;
+  /* margin: auto; */
   /* text-align: center; */
-  background-color: crimson;
+  padding-top: 0;
+  /* padding-left: 0; */
+  font-size: 30px;
+  /* padding-bottom: 2rem; */
+  /* background-color: crimson; */
 }
-/**************** La palette du gout **********************/
+footer ul, li{
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    margin-left: 1%;
+    margin-top: 0.01rem;
+}
 
-#palette-du-gout img{
+  } /* Crochet de cloture du Media Query  */
+
+
+/* ********* Restaurant La palette du gout Fichier HTML *************
+
+#palette-du-gout {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); 
+}
+#palette-du-gout img {
+  height: 50%;
+  object-fit: cover;
+  /* object-position: 40% 40%; */
+  /* object-position: center; 
+  width: 100%;
+}
+
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; 
+  top: 42vh;
+  width: 100%;
   height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); 
+  z-index: 1;
+}
+#palette{
+  display: flex;
+  padding-top: 5%;
+  /* margin-left: 5%; 
+  margin-bottom: 5%;
+  /* flex-direction: column; */
+  /* align-items: flex-start; 
+  width: 100%;
+  
+  /* background-color: violet; 
+  border-radius: 3rem 3rem 0 0;
+}
+#gout{
+  display: flex;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 5%;
+  /* font-style: italic; 
+  font-family: "Shrikhand", cursive;
+  /* background-color: rgba(37, 37, 240, 0.472); 
+}
+
+#coeur{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8%;
+  width: 15%;
+  font-size: 1.5rem;
+  color: rgba(128, 128, 128, 0.878)
+}
+.entrees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.entrees p:first-child{
+  
+  align-items: flex-start;
+  text-transform: uppercase;
+  /* margin-left: 5%; */
+  /* margin-top: 0; 
+  width: 95%;
+  /* background-color: #fff; 
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.plats p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+.desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desserts p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+
+.menus-restaurants {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+  border-radius: 1rem;
+  display: flex;
+  margin-bottom: 5%;
+  word-wrap: normal;
+  height: 4.5rem;
+  width: 95%;
+}
+.menus-restaurants  i {
+  margin-left: 55%;
+}
+.menu-texte {
+  width: 90%;
+}
+.menu-texte h3, p{
+  margin-left: 3%;
+  line-height: 0.3;
+  /* margin: 0; 
+}
+
+.menu-prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  width: 20%;
+}
+
+.button-command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border:none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0 4rem 0;
+  width: 20rem;
+  /* width: 150px; 
+} */
+
+
+/**************** La note enchantée Fichier HTML *********************/
+
+/* #la-note-enchantee {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); 
+}
+
+#la-note-enchantee img {
+  height: 50%;
   object-fit: cover;
   width: 100%;
 }
 
-/* *************** La note enchantée **********************/
-
-#la-note-enchantee img{
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; 
+  top: 42vh;
+  width: 100%;
   height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); 
+  z-index: 1;
+}
+#la-note{
+  display: flex;
+  padding-top: 5%;
+  /* margin-left: 5%; 
+  margin-bottom: 5%;
+  /* flex-direction: column; */
+  /* align-items: flex-start; 
+  width: 100%;
+  
+  /* background-color: violet; 
+  border-radius: 3rem 3rem 0 0;
+}
+#gout{
+  display: flex;
+  width: 90%;
+  font-size: 20px;
+  margin-left: 5%;
+  /* font-style: italic; 
+  font-family: "Shrikhand", cursive;
+  /* background-color: rgba(37, 37, 240, 0.472); 
+}
+#coeur{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 8%;
+  width: 15%;
+  font-size: 1.5rem;
+  color: rgba(128, 128, 128, 0.878)
+}
+.entrees {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.entrees p:first-child{
+  
+  align-items: flex-start;
+  text-transform: uppercase;
+  /* margin-left: 5%; */
+  /* margin-top: 0; 
+  width: 95%;
+  /* background-color: #fff; 
+}
+
+.plats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.plats p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+.desserts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desserts p:first-child{
+  align-items: flex-start;
+  text-transform: uppercase;
+  width: 95%;
+}
+
+.menus-restaurants {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+  border-radius: 1rem;
+  display: flex;
+  margin-bottom: 5%;
+  word-wrap: normal;
+  height: 4.5rem;
+  width: 95%;
+}
+.menus-restaurants  i {
+  margin-left: 55%;
+}
+.menu-texte {
+  width: 90%;
+}
+.menu-texte h3, p{
+  margin-left: 3%;
+  line-height: 0.3;
+  /* margin: 0; 
+}
+
+.menu-prix {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 4%;
+  width: 20%;
+}
+
+.button-command {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border:none;
+  border-radius: 2rem;
+  color: white;
+  height: 3rem;
+  font-weight: bold;
+  margin: 1.5rem 0 4rem 0;
+  width: 10rem;
+  /* width: 150px; 
+} */
+
+/*********************** à la Française Fichier HTML **************/
+
+#a-la-francaise {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); */
+}
+#a-la-francaise img {
+  height: 50%;
   object-fit: cover;
   width: 100%;
 }
-
-/*********************** à la Française ********************/
-
-#a-la-francaise img{
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; */
+  top: 42vh;
+  width: 100%;
   height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); */
+  z-index: 1;
+}  
+/*********************** délices des sens Fichier HTML ************/
+#delices-des-sens {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  /* top: 100px; */
+  /*left: 100px; */
+  /*transform: translate( -50px, -300px); */
+}
+#delices-des-sens img {
+  height: 50%;
   object-fit: cover;
   width: 100%;
 }
-
-/*********************** délices des sens *********************/
-#delices-des-sens img{
-  height: auto;
-  object-fit: cover;
+.fond-couleur {
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  background-color: #f0f0f0;
+  position: relative;
+  /* top: 350px; */
+  /* top: 50%; */
+  top: 42vh;
   width: 100%;
+  height: auto;
+  border-radius: 3rem 3rem 0 0;
+  /* transform: translate(0, 300px); */
+  z-index: 1;
 }
-
-
-
-
-/************************* footer ***********************************/
+/************************* pied de page ***************************/
 
 footer {
-  /* height: 8rem; */
-  color: #fff;
   background-color: #020202;
+  color: #fff;
+  /* position: relative; */
+  /* top: 800px; */
+  /* top: 140vh; */
+  /* top: 140%; */
+  width: 100%;
+  height: 12rem;
+  /* z-index: 3; */
+}
+/* Description (.footer-next pour les restaurants sauf index.html) */
+.footer-next {
+  background-color: #020202;
+  color: #fff;
+  position: relative;
+  /* top: 300px; */
+  top: 40vh;
+  /* top: 200%; */
+  width: 100%;
+  /* z-index: 3; */
+}
+.footer-next h3{
+  padding-bottom: 0.5rem;
 }
 .logo-footer {
   font-family: "Shrikhand", cursive;
+  padding-top: 5%;
+  margin-left: 5%;
 }
 .logo-footer,
 ul {
-  font-family: "Roboto" sans-serif;
+  /* font-family: "Roboto" sans-serif; */
+  /* font-style: normal; */
+  margin-left: 5%;
   padding-left: 0;
-  /* margin-left: 2rem; */
+  line-height: 1.5;
 }
+.fa-utensils {
+  margin-right: 10px;
+}
+fa-handshake-angle,
+fa-xs {
+  margin-left: 25px;
+  font-size: 0.1rem;
+  /* width: 0.01rem; */
+  /* height: 0.01rem; */
+}
+
