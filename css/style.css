@@ -47,9 +47,6 @@ ul {
   padding-right: 3rem;
   margin-left: 5%;
 } 
-/*.retour h1 {
-  width: 100%;
-}*/
 .logo-entete {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
@@ -145,8 +142,17 @@ ul {
   left: -2%;
   z-index: 1;
   font-size: 30px;
+  /* color: #fff; */
   color: #9356DC;
   /* transform: translate(-2% -2%); */
+}
+#puces1 span{
+  /* display: inline-block; */
+  position: absolute;
+  top: 12.5%;
+  left: 0.5%;
+  z-index: 1;
+  color: white;
 }
 #puces2 i{
   position: absolute;
@@ -156,6 +162,17 @@ ul {
   font-size: 30px;
   color: #9356DC;
 }
+
+#puces2 span{
+  /* display: inline-block; */
+  /* align-items: center; */
+  position: absolute;
+  top: 45.5%;
+  left: 0.5%;
+  z-index: 1;
+  color: white;
+}
+
 #puces3 i{
   position: absolute;
   top: 78%;
@@ -163,6 +180,14 @@ ul {
   z-index: 1;
   font-size: 30px;
   color: #9356DC;
+}
+#puces3 span{
+  /* display: inline-block; */
+  position: absolute;
+  top: 78.5%;
+  left: 0.5%;
+  z-index: 1;
+  color: white;
 }
 .fonction-choix {
   border-radius: 1.5rem;
@@ -229,6 +254,7 @@ ul {
   padding: 5px 12px 5px 12px;
   text-transform: capitalize;
   color: green;
+  /* border-radius: 1rem 1rem 0 0; */
   background-color: #99E2D0;
 }
 .figure-card, .card2 img{
@@ -253,11 +279,14 @@ ul {
   /* margin-left: 0.5rem; */
 }
 .figcap-flex i{
-  margin-left: 70%;
-  line-height: 2.2;
+  margin-left: 70%; 
+  margin-top: 1rem;
+  /* line-height: 2.2; */
   flex-wrap: nowrap;
-  font-size: 1.7rem;
-  color: rgba(128, 128, 128, 0.878)
+  font-size: 2rem;
+  /* font-size: 1.7rem; */
+  color: rgba(128, 128, 128, 0.878);
+  
   /* font-weight: normal; */
   /* margin-right: 1rem; */
 }
@@ -268,9 +297,12 @@ ul {
   /* background-color: skyblue; */
   /* border: 1px solid black; */
 }
-
-
-
+.fa-heart {
+  /* color: transparent; */
+  /* height: 15px; */
+  background-clip: content-box;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
 
 /********** Restaurant La palette du gout Fichier HTML **************/
 
@@ -396,14 +428,6 @@ ul {
   /* margin: 0; */
 }
 
-/* .menu-prix {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 4%;
-  width: 20%;
-} */
-
 .button-command {
   background: linear-gradient(#FF79DA, #9356DC);
   border:none;
@@ -518,6 +542,7 @@ ul {
 }
 
 .menus-restaurants {
+  position: relative;
   background-color: #fff;
   box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
   border-radius: 1rem;
@@ -531,7 +556,9 @@ ul {
   margin-left: 55%;
 }
 .menu-texte {
-  width: 90%;
+  width: 80%;
+  border-radius: 1rem 0 0 1rem ;
+  /* background-color: cyan; */
 }
 .menu-texte h3, p{
   margin-left: 3%;
@@ -539,13 +566,13 @@ ul {
   /* margin: 0; */
 }
 
-/* .menu-prix {
+.menu-prix {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-bottom: 4%;
   width: 20%;
-} */
+} 
 
 .button-command {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -559,6 +586,54 @@ ul {
   /* width: 150px; */
 }
 
+.check{
+  color: white;
+  font-size: 25px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15%;
+  /* width: 20%;  Position origin */
+  /* width: -15%; */
+  /* width: 8%; */
+  padding-right: 2rem;
+  position: absolute;
+  top: 0;
+  /* right: -20%; Position origin */
+  right: -24%;
+  border-radius: 0 1rem 1rem 0;
+  visibility: hidden;
+}
+.menus-restaurants:hover .menu-texte {
+  width: 60%;
+  border-radius: 1rem 0 0 1rem;
+}
+.menus-restaurants:hover .check{
+  visibility: visible;
+  animation: translation-gauche 0.5s ease-out forwards; 
+}
+.menus-restaurants:hover .fa-check-circle{
+  animation: rotation 0.8s ease 0.3s forwards;
+}
+
+@keyframes translation-gauche {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+  transform: translateX(-100%);
+  }
+}
+@keyframes rotation {
+  0% {
+   -webkit-transform: rotate(0);
+  }
+  100% {
+  -webkit-transform: rotate(360deg);
+  }
+}
 
 
 /* **************************************************************** */
@@ -739,8 +814,94 @@ footer ul, li{
 
   } /* Crochet de cloture du Media Query  */
 
+/* **************************************************************** */
+/* ********************* Media Query Desktop ********************* */
+/* **************************************************************** */
+@media (min-width: 993px) {
 
-/* ********* Restaurant La palette du gout Fichier HTML *************
+  #fonctionnement {
+    height: 400px;
+    width: 100%;
+    flex-wrap: wrap;
+    /* font-size: rem; */
+    justify-content: center;
+    /* background-color: #f6f6f6; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* background-color: red; */
+  }
+  #fonctionnement,
+  ul {
+    /* position: relative; */
+    /* display: flex; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* font-style: normal; */
+    width: 100vw;
+    /* justify-content: space-between; */
+    /* list-style-type: circle; */
+  }
+    
+  #fonctionnement li{
+    margin: 1rem;
+    width: 25%;
+  }
+  
+  
+  
+  
+  
+  
+  #puces1 i{
+    position: absolute;
+    top: 12%;
+    left: -2%;
+    z-index: 1;
+    font-size: 30px;
+    /* color: #fff; */
+    color: #9356DC;
+    /* transform: translate(-2% -2%); */
+  }
+  #puces1 span{
+    /* display: inline-block; */
+    position: absolute;
+    top: 12.5%;
+    left: 0.5%;
+    z-index: 1;
+    color: white;
+  }
+} /* crochet de fermeture du Média query */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ********* Restaurant La palette du gout Fichier HTML *************
 
 #palette-du-gout {
   height: 100%;
