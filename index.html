@@ -16,11 +16,12 @@
     <title>Oh my Food-Accueil</title>
   </head>
   <body>
-    <main> <!--main pourrait être situé apres la balise de fermeture   header-->
-    <header>
-      <h1 class="logo-entete">ohmyfood</h1>
-    </header>
-        <section id="explorer-restaurants">
+            <div id="loader-spin"></div>
+    <main> 
+        <header>
+          <h1 class="logo-entete">ohmyfood</h1>
+        </header>
+          <section id="explorer-restaurants">
           <div>
             <p><i class="fa-solid fa-location-dot"></i>Paris,  Belleville</p>
             <h2>
@@ -43,22 +44,19 @@
                 <h2>Fonctionnement</h2>
                 <ul>
               <div id="puces1">
-                <i class="fa-solid fa-circle"></i>
-                <span>1</span>
-            </div>
+                <i class="fa-solid fa-circle"><span>1</span></i>
+              </div>
               <li class="fonction-choix">
                 <i class="fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span>
                 </li>
                 
                 <div id="puces2">
-                    <i class="fa-solid fa-circle"></i>
-                  <span>2</span>
+                    <i class="fa-solid fa-circle"><span>2</span></i>
                   </div>
                 <li class="fonction-choix"><i class="fa-solid fa-list-ul"></i><span>Composez votre menu</span></li>
                 
                 <div id="puces3">
-                  <i class="fa-solid fa-circle"></i>
-                <span>3</span>
+                  <i class="fa-solid fa-circle"><span>3</span></i>
                 </div>
                   <li class="fonction-choix"><i class="fa-solid fa-store"></i><span>Dégustez au restaurant</span></li>
             </ul>
@@ -66,13 +64,13 @@
         </section>
 
       <!-- ----------------- RESTAURANTS --------------------- -->
-        <section id="contener-restaurants">
-          <div>
-          <div id="h2-resto">  
-            <h2>Restaurants</h2>
-          </div>
+      <section id="contener-restaurants">
+          <div id="contener-grid">
+          <!-- <div id="h2-resto">   -->
+            <h2 id="h2-resto">Restaurants</h2>
+          <!-- </div> -->
           <a href="la-palette-du-gout.html" class="a-ref-cards">
-            <figure class="figure-card">
+            <figure class="figure-card card1">
               <img  src="images/restaurants/menu-1.jpg" alt="la-palette-du-gout"/>
               <span>nouveau</span>
               <figcaption class="figcap-flex"> 
@@ -80,8 +78,8 @@
                   </div>
                   <div class="items"><p>Ménilmontant</p>
                     </div> 
-                    <div class="items"><i class="fa-regular fa-heart"></i>
-                    </div>
+                    <div class="items"><i class="fa-solid fa-regular fa-heart"></i>
+              </div>
               </figcaption> 
             </figure>
           </a>
@@ -102,8 +100,11 @@
                       <div class="items">
                             <p>Charonne</p>
                         </div>
-                      <div class="items"><i class="fa-regular fa-heart"></i></div>
-                </figcaption>
+                      <div class="items">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
+                      </div>
+                        </figcaption>
             </figure>
           </a>
         <!-- </div>  -->
@@ -146,17 +147,17 @@
               </figcaption>
             </figure>
           </a>
-        <!-- </div> --->
+        </div>
         </section>
       
         <footer>
           <nav>
             <h3 class="logo-footer">ohmyfood</h3>
             <ul>
-              <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-              <li><i class="fa-solid fa-handshake-angle fa-xs"></i>   Devenir partenaire</li>
-              <li>Mentions légales</li>
-              <li>Contact</li>
+              <li><a class="active"href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+              <li><a class="active" href="#"><i class="fa-solid fa-handshake-angle fa-xs"></i>Devenir partenaire</a></li>
+              <li><a class="active" href="#">Mentions légales</a></li>
+              <li><a class="active" href="mailto:contact-ohmyfood@gmail.com">Contact</a></li>
             </ul>
           </nav>
         </footer>

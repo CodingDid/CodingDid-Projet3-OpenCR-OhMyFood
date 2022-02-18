@@ -6,39 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/restaurant.css">
     <title>Menu Note enchantée</title>
 </head>
 <body>
-    <main> <!--main pourrait être situé apres la balise de fermeture header-->
+    <main> 
         <header class="retour">
-            <h1 class="logo-entete-next" ><a href="index.html">
-                <i class="fa-solid fa-arrow-left"></a></i>
-                ohmyfood</h1>
-        <!-- <div class="fleche-retour"> -->
-            <!-- <a href="index.html"> -->
-                <!-- <i class="fa-solid fa-arrow-left-long"></i> -->
-            <!-- </a>    -->
-        <!-- </div> -->
-        <!-- <div class="logo-next"> -->
-        <!-- </div> -->
+            <h1 class="logo-entete-next">
+                <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <span>ohmyfood</span>
+            </h1>
         </header>
         
         
-        <div id="la-note-enchantee">
+        <div class="entete">
             <img src="/images/restaurants/menu-2.jpg" alt="la-note-enchantee">
         </div>
+        
         <div class="fond-couleur">
-            
-            <div id="la-note">
-            <!-- <div id="palette"> -->
-                <div id="gout">
-                    <h2>La note enchantée</h2>
+            <div class="nom-restaurant">
+                <div class="gout"><h2>La note enchantée</h2>
                 </div>
-                    <div id="coeur">
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
+                    <div class="coeur">
+                    <i class="fa-regular fa-heart"></i>
                 </div>
+            </div>
             
             <section class="entrees"><p>Entrées</p>
                 <div class="menus-restaurants">
@@ -168,14 +160,14 @@
         </section>
         </div>
         
-        <footer class="footer-next">
+        <footer>
             <nav>
               <h3 class="logo-footer">ohmyfood</h3>
               <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle fa-xs"></i>   Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+                <li><a class="active" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a class="active" href="#"><i class="fa-solid fa-handshake-angle fa-xs"></i>Devenir partenaire</a></li>
+                <li><a class="active" href="#">Mentions légales</a></li>
+                <li><a class="active" href="mailto:contact-ohmyfood@gmail.com">Contact</a></li>
               </ul>
             </nav>
         </footer>

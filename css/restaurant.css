@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&family=Raleway:wght@400;700&family=Roboto:wght@100;200;300;400;500&family=Shippori+Antique+B1&family=Shrikhand&display=swap");
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 255, 0.397);
+  }
+  main {
+    /* background-color: rgb(129, 212, 129); */
+    font-family: "Roboto", sans-serif;
+  }
+  section {
+    width: 100%;
+    margin: 0;
+  }
+ul {
+    list-style: none;
+}
+
+/* Couleurs Maquette */
+#primaire {
+    background-color: #9356DC;
+  }
+#secondaire {
+    background-color: #FF79DA;
+  }
+#tertiaire {
+    background-color: #99E2D0;
+  }
+
+  /* ************************************************ */
+.retour {
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 100%;
+    /* margin-left: 40px;   */
+    /* background-color: rgba(255, 127, 80, 0.342); */
+    /* border: 2px solid black;*/ 
+  }
+.logo-entete-next {
+    font-family: "Shrikhand", cursive;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    /* text-align: center; */
+}
+.fa-arrow-left {
+    color: black;
+    padding-right: 3rem;
+    margin-left: 5%;
+    font-size: 22px;
+  } 
+.entete {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.entete img {
+    height: 50%;
+    /* object-fit: scale-down; */
+    /* object-fit: calc(); */
+    object-position: 25% 25%;
+    /* object-position: center ; */
+    width: 100%;
+}
+
+.fond-couleur {
+    background-color: #f7f7f7;
+    position: relative;
+    top: 40vh;
+    width: 100%;
+    height: auto;
+    border-radius: 3rem 3rem 0 0;
+    z-index: 1;
+}
+.nom-restaurant{
+    display: flex;
+    padding-top: 5%;
+    margin-bottom: 0;
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+}
+
+.menus-restaurants{
+    animation-name: menu;
+    animation-duration: 2s;
+
+}
+.menu-texte {
+    margin-top: 2%;
+    /* line-height: 0.5; */
+    /* animation-name: menu; */
+    /* animation-duration: 2s; */
+} 
+
+@keyframes menu{
+    0% {
+    transform: translateY(75%);
+    opacity: 0;
+}
+    50%{
+    transform: translateY(50%);
+    opacity: 0;
+} 
+    100%{
+    transform: translateY(0);
+    opacity: 1;
+}
+    }
+
+.gout{
+    display: flex;
+    width: 90%;
+    font-size: 20px;
+    margin-left: 5%;
+    font-family: "Shrikhand", cursive;
+}
+.coeur {
+    /* position: relative; */
+    display: flex;
+    align-items: flex-end;
+    margin-right: 6%;
+    margin-bottom: 8%;
+    /* background-color: green; */
+    /* width: 15%; */
+    font-size: 1.8rem;
+    color: rgba(128, 128, 128, 0.878)
+}
+.coeur i, .fa-heart{
+    /* position: absolute; */
+    /* top: 1.5rem; */
+    /* right: 1rem; */
+    /* margin: 0; */
+    color: red;
+    background: cornflowerblue
+
+    /* background-color: burlywood; */
+}
+.coeur > i:active{
+    background: #99E2D0;
+}
+
+.entrees {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding-bottom: 5%; */
+}
+.entrees p:first-child{
+    align-items: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    width: 95%;
+
+} 
+.entrees > p::after {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    left: 0.6rem;
+    height: 0.30rem;
+    width: 2.5rem;
+    background-color: #99E2D0;
+}
+
+.plats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5%;
+}
+.plats p:first-child{
+    align-items: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    width: 95%;
+}
+.plats > p::after {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    left: 0.6rem;
+    height: 0.30rem;
+    width: 2.5rem;
+    background-color: #99E2D0;
+}
+.desserts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.desserts p:first-child{
+    align-items: flex-start;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    width: 95%;
+}
+.desserts > p::after {
+    content: "";
+    position: absolute;
+    top: 2.4rem;
+    left: 0.6rem;
+    height: 0.30rem;
+    width: 2.5rem;
+    background-color: #99E2D0;
+}
+.menus-restaurants {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
+    border-radius: 1rem;
+    display: flex;
+    margin-bottom: 5%;
+    word-wrap: normal;
+    height: 5rem;
+    width: 95%;
+}
+.menus-restaurants  i {
+    margin-left: 55%;
+}
+.menu-texte {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem 0 0 1rem ;
+}
+.menu-texte h3, .menu-texte p{
+    margin: 2% 0 0 3%;
+    height: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu-prix {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 2%;
+    width: 20%;
+}
+
+.button-command {
+    background-image:  linear-gradient(to bottom, #FF79DAB3, #9356DCB3);
+    box-shadow: 1px 1px 14px -3px #000000b2;
+    /* box-shadow: 1px 1px 16px -3px #000000; */
+    /* background: linear-gradient(#FF79DA, #9356DC); */
+    border:none;
+    border-radius: 2rem;
+    color: white;
+    height: 3rem;
+    font-weight: bold;
+    margin: 1.5rem 0 4rem 0;
+    width: 12rem;
+}
+.button-command:hover {
+    opacity: 0.9;
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.check{
+    color: white;
+    font-size: 25px;
+    background-color: #99E2D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    padding-right: 2rem;
+    position: absolute;
+    top: 0;
+    right: -24%;
+    border-radius: 0 1rem 1rem 0;
+    visibility: hidden;
+}
+.menus-restaurants:hover .menu-texte {
+    width: 60%;
+    border-radius: 1rem 0 0 1rem;
+}
+.menus-restaurants:hover .check{
+    visibility: visible;
+    animation: translation-gauche 0.5s ease-out forwards;
+}
+.menus-restaurants:hover .fa-check-circle{
+    animation: rotation 0.8s ease 0.3s forwards;
+}
+
+/******** Animation *******/
+@keyframes translation-gauche {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+footer {
+    background-color: #020202;
+    color: #fff;
+    position: relative;
+    top: 40vh;
+    width: 100%;
+    padding-top: 1.5rem;
+    height: 14rem;
+}
+.logo-footer{
+    font-family: "Shrikhand", cursive;
+    padding-top: 5%;
+    /* margin-left: 5%; */
+    /* margin-bottom: 0; */
+}
+.logo-footer,
+ul {
+    margin-left: 8%;
+    padding-left: 0;
+    line-height: 1.5;
+}
+.fa-utensils {
+    margin-right: 10px;
+}
+.active{
+    text-decoration: none;
+    color: white;
+}
+.active:hover{
+    color: #99E2D0;
+}
+/* **************************************************************** */
+/* ********************* Media Query Tablette ********************* */
+/* **************************************************************** */
+@media (min-width: 768px) and (max-width: 992px) {
+    
+/* Média Query Entête Restaurants  */
+.logo-entete-next {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    margin-right: 30%;
+  }
+.logo-entete-next i{
+    font-size: 30px;  
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+/*********** Menu restaurants *************/
+.gout h2{
+    font-size: 2.5rem;
+}
+.coeur{
+    margin: 0 10% 5% 0;
+}
+.menus-restaurants{
+    width: 92%;
+}
+
+.entrees p:first-child{
+    margin-left: 2rem;
+}
+
+.entrees > p::after {
+    left: 2.2rem;
+}
+
+.plats p:first-child{
+    margin-left: 2rem;
+}
+.plats > p::after {
+    left: 2.2rem;
+}
+.desserts p:first-child{
+    margin-left: 2rem;
+}
+.desserts > p::after {
+    left: 2.2rem;
+}
+.menu-texte{
+    margin-top: 0.5%;
+}
+.check { 
+    padding-right: 4rem;
+}
+
+/********* Média Query tablette pied de page *****************/
+.logo-footer{
+    font-size: 30px;
+    margin-left: 4rem;
+}
+  
+footer ul, li{
+    display: flex;
+    justify-content: space-evenly;
+    height: 4rem;
+    margin-right: 1.5rem;
+    margin-top: 0.01rem;
+  }
+      }  /* crochet fermeture media query */
+
+/* **************************************************************** */
+/* ********************* Media Query Desktop ********************* */
+/* **************************************************************** */
+@media (min-width: 993px) {
+
+/*********** Média Query Desktop Entête Restaurants ****************/
+  .logo-entete-next {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    margin-right: 30%;
+  }
+.logo-entete-next i{
+    font-size: 30px;  
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+.fond-couleur{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.nom-restaurant{
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+
+.gout h2{
+    font-size: 2.5rem;
+}
+.coeur{
+    margin: 0 10% 5% 0;
+    font-size: 40px;
+}
+/* .menus-restaurants{
+    width: 90%;
+} */
+.entrees p:first-child{
+    width: 65%;
+    margin-left: auto;
+    /* margin-left: 6rem; */
+}
+.entrees p::after {
+    margin-left: 34.5%;
+}
+
+.plats p:first-child{
+    width: 65%;
+    margin-left: auto;
+    /* margin-left: 6rem; */
+}
+.plats p::after {
+    margin-left: 34.5%;
+}
+
+.desserts p:first-child{
+    width: 65%;
+    margin-left: auto;
+    /* margin-left: 6rem; */
+}
+.desserts p::after {
+    margin-left: 34.5%;
+}
+/********* Média Query Desktop pied de page *****************/
+.logo-footer{
+    font-size: 30px;
+    margin-left: 4rem;
+}
+  
+footer ul, li{
+    display: flex;
+    justify-content: space-evenly;
+    height: 4rem;
+    margin-right: 1.5rem;
+    margin-top: 0.01rem;
+  }
+} /* crochet fermeture media query */
+

@@ -8,6 +8,40 @@ body {
   box-sizing: border-box;
   /* background-color: rgba(0, 0, 255, 0.397); */
 }
+#loader-spin{
+  /* création des dimenssion SPIN  */
+  border: 10px solid grey;
+  border-radius: 50%;
+  border-top: 10px solid #9356DC;
+  border-right: 6px solid #FF79DA;
+  border-bottom: 10px solid #9356DC;
+  border-left: 6px solid #99E2D0;
+  width: 10rem;
+  height: 5rem;
+  -webkit-animation: rotation 3s linear;
+  -o-animation: rotation 3s linear;
+  animation: rotation 3s linear;
+  transition-duration: 5s;
+  transition-property: background-color;
+  visibility: visible;
+  /* Placement du spin au milieu de l'écran */
+  
+  margin: auto;
+  position: absolute;
+  /* left: 50%; top: 50%; right: 50%; bottom: 50%; */
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+100%{
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
 main {
   /* background-color: rgb(129, 212, 129); */
   font-family: "Roboto", sans-serif;
@@ -16,6 +50,10 @@ section {
   width: 100%;
   margin: 0;
 }
+/* h2 {
+  font-size: clamp(1rem, 2.5vw, 5rem);
+} */
+
 ul {
   list-style: none;
 }
@@ -36,17 +74,7 @@ ul {
   /* display: flex; */
   /* justify-content: center; */
   width: 100%;
-  /* margin-left: 40px;*/  
-  /* background-color: rgba(255, 127, 80, 0.342); */
-  /* border: 2px solid black; */
 }
-.fa-arrow-left {
-  /* font-size: 30px; */
-  /* width: 5%;*/ 
-  color: black;
-  padding-right: 3rem;
-  margin-left: 5%;
-} 
 .logo-entete {
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
@@ -57,9 +85,6 @@ ul {
   /* display: flex; */
 }
 .logo-entete-next {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* border: 1px solid black; */
   font-family: "Shrikhand", cursive;
   font-size: 2rem;
   width: 100%;
@@ -69,7 +94,7 @@ ul {
 /******************* Section Explorer Accueil ********************/
 #explorer-restaurants {
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   height: 24rem;
   width: 100%;
 }
@@ -97,11 +122,10 @@ ul {
   font-weight: 200;
 }
 #button-explorer {
-  /* display: flex; */
-  /* flex-direction: column; */
   align-items: center;
-  background: linear-gradient(#FF79DA, #9356DC);
-  /* box-shadow: 5px 5px 2px 1px rgba(255, 255, 255, .2); */
+  background-image:  linear-gradient(to top, #9356DCE6, #FF79DAE6);
+  transition: all 300ms;
+  box-shadow: 1px 1px 14px -3px #000000b2;
   border-radius: 2rem;
   border:none;
   color: white;
@@ -111,13 +135,17 @@ ul {
   width: 14rem;
   margin-left: auto;
 }
-
-/****************** section fonctionnement Accueille *****************/
+#button-explorer:hover{
+  transform: scale(1.01);
+  /* transition: opacity .3s; */
+  /* box-shadow: 2px 1px 1px #9356DC; */
+  /* transform: scale(1.1); */
+  opacity: 0.9;  
+  cursor: pointer;
+}
+/****************** section fonctionnement Accueil *****************/
 
 #fonctionnement {
-  /* background-color: #f6f6f6; */
-  /* display: flex; */
-  /* flex-direction: column; */
   flex-wrap: wrap;
   font-size: 1.2rem;
 }
@@ -130,34 +158,41 @@ ul {
   font-style: normal;
   margin: 0;
   width: 95%;
-  /* align-items: center; */
-  /* list-style-type: circle; */
+}
+
+#conteneur-F{
+  position: relative;
 }
 #contenereur-F h2 {
   margin-left: 5%;
 }
 #puces1 i{
   position: absolute;
-  top: 12%;
-  left: -2%;
+  /* top: 12%; */
+  /* left: -2%; */
+  top: 2.5rem;
+  left: -0.5rem;
   z-index: 1;
   font-size: 30px;
-  /* color: #fff; */
   color: #9356DC;
   /* transform: translate(-2% -2%); */
 }
 #puces1 span{
-  /* display: inline-block; */
   position: absolute;
-  top: 12.5%;
-  left: 0.5%;
+  /* top: 12.5%; */
+  /* left: 0.5%; */
+  top: 0.4rem;
+  left: 0.7rem;
   z-index: 1;
   color: white;
+  font-size: 15px;
 }
 #puces2 i{
   position: absolute;
-  top: 45%;
-  left: -2%;
+  /* top: 45%; */
+  /* left: -2%; */
+  top: 9rem;
+  left: -0.5rem;
   z-index: 1;
   font-size: 30px;
   color: #9356DC;
@@ -167,16 +202,22 @@ ul {
   /* display: inline-block; */
   /* align-items: center; */
   position: absolute;
-  top: 45.5%;
-  left: 0.5%;
+  /* top: 45.5%; */
+  /* left: 0.5%; */
+  top: 0.4rem;
+  left: 0.6rem;
+  
   z-index: 1;
   color: white;
+  font-size: 15px;
 }
 
 #puces3 i{
   position: absolute;
-  top: 78%;
-  left: -2%;
+  /* top: 78%; */
+  /* left: -2%; */
+  top: 16rem;
+  left: -0.5rem;
   z-index: 1;
   font-size: 30px;
   color: #9356DC;
@@ -184,23 +225,43 @@ ul {
 #puces3 span{
   /* display: inline-block; */
   position: absolute;
-  top: 78.5%;
-  left: 0.5%;
+  /* top: 78.5%; */
+  /* left: 0.5%; */
+  top: 0.5rem;
+  left: 0.6rem;
   z-index: 1;
+  /* color: black; */
   color: white;
+  font-size: 15px;
 }
 .fonction-choix {
   border-radius: 1.5rem;
-  background-color: rgb(219, 107, 129);
+  background-color: #f7f7f7;
+  /* background-color: rgb(219, 107, 129); */
   display: flex;
   justify-content: center;
   margin: 0.5rem;
   padding: 2rem;
+  box-shadow: 2px 2px 12px -3px gray;
+  /* box-shadow: 0 9px grey; */
+  /* box-shadow: 4px 2px 2px grey; */
+
+}
+.fonction-choix:hover{
+  transform: translate(3px); 
+  background-color: #9356DC1A;
+  /* background-color: #9356DC14; */
+  /* box-shadow: 2px 1px 1px #000000; */
+  cursor: pointer;
+  /* box-shadow: 0 6px grey; */
+
 }
 .fonction-choix i{
   margin-right: 20px;
 }
-
+.fa-store{
+  color: #9356DC;
+}
 /********************* Restaurants Accueil ***************************/
 
 #contener-restaurants {
@@ -209,21 +270,29 @@ ul {
   flex-direction: column;
   /* align-items: center; */
   flex-wrap: wrap;
-  /* width: 100%; */
-  background-color: #f0f0f0;
+  width: 100%;
+  background-color: #f7f7f7;
+  /* background-color: #f0f0f0; */
 } 
+
+#contener-bis{
+  width: 100%;
+}
+
+
 #h2-resto {
   margin-top: 2rem;
   margin-left: 1.5rem;
   align-items: flex-start;
   width: 100%;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
-#contener-restaurants a{
-  width: 90%;
+#contener-restaurants  a{
+  width: 100%;
   padding-bottom: 0;
   text-decoration: none;
   color: black;
+  margin: 0;
 }
 .figure-card {
   /* align-items: flex-start; */
@@ -232,6 +301,7 @@ ul {
   position: relative;
   width: 90%;
   margin: auto;
+  /* margin: 0; */
   margin-top: 1.5rem;
   border-radius: 1rem;
   /* background-color: crimson; */
@@ -240,9 +310,11 @@ ul {
 
 .figure-card img {
   width: 100%;
-  height: 11rem;
+  /* height: 50%; */
+  height: 12rem;
   object-fit: cover;
-  object-position: bottom center;
+  object-position: center right;
+  /* object-position: bottom center; */
   border-radius: 1rem 1rem 0 0;
 }
 
@@ -254,7 +326,6 @@ ul {
   padding: 5px 12px 5px 12px;
   text-transform: capitalize;
   color: green;
-  /* border-radius: 1rem 1rem 0 0; */
   background-color: #99E2D0;
 }
 .figure-card, .card2 img{
@@ -272,24 +343,31 @@ ul {
   /* background-color: #fff; */
   /* margin: auto; */
 }  
-.figcap-flex h3, p {
-  padding-top: 3px;
-  line-height: 0.01;
-  /* margin-bottom: 20px; */
-  /* margin-left: 0.5rem; */
+.figcap-flex h3 {
+  margin-left: 0.5rem;
 }
-.figcap-flex i{
+.figcap-flex p{
+  margin: 0.5rem 0 0 0.5rem;
+}
+.figcap-flex i {
   margin-left: 70%; 
   margin-top: 1rem;
-  /* line-height: 2.2; */
-  flex-wrap: nowrap;
+  /* line-height: 2.2;*/ 
+  flex-wrap: nowrap; 
   font-size: 2rem;
   /* font-size: 1.7rem; */
-  color: rgba(128, 128, 128, 0.878);
-  
-  /* font-weight: normal; */
-  /* margin-right: 1rem; */
+  /* color: green; */
+  /* color: rgba(128, 128, 128, 0.878); */
+  /* background-image: linear-gradient(#FF79DA, #9356DC); */
 }
+.items .fa-regular {
+  margin-left: 70%; 
+  margin-top: 1rem;
+  
+  /* line-height: 2.2;*/
+  /* flex-wrap: nowrap; */
+  /* font-size: 3rem; */
+} 
 .items{
   width: 50%;
   height: 2.5rem;
@@ -297,345 +375,16 @@ ul {
   /* background-color: skyblue; */
   /* border: 1px solid black; */
 }
-.fa-heart {
-  /* color: transparent; */
-  /* height: 15px; */
-  background-clip: content-box;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+.items .fa-solid, .fa-regular{
+  color: transparent;
+  background-image: linear-gradient(red, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-
-/********** Restaurant La palette du gout Fichier HTML **************/
-
-#palette-du-gout {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); */
+.items i:hover{
+  transform: translate(20);
+  opacity: 0;
 }
-#palette-du-gout img {
-  height: 50%;
-  object-fit: cover;
-  /* object-position: 40% 40%; */
-  /* object-position: center; */
-  width: 100%;
-}
-
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; */
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); */
-  z-index: 1;
-}
-#palette{
-  display: flex;
-  padding-top: 5%;
-  /* margin-left: 5%; */
-  margin-bottom: 5%;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  width: 100%;
-  
-  /* background-color: violet; */
-  border-radius: 3rem 3rem 0 0;
-}
-#gout{
-  display: flex;
-  width: 90%;
-  font-size: 20px;
-  margin-left: 5%;
-  /* font-style: italic; */
-  font-family: "Shrikhand", cursive;
-  /* background-color: rgba(37, 37, 240, 0.472); */
-}
-
-#coeur{
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 8%;
-  width: 15%;
-  font-size: 1.5rem;
-  color: rgba(128, 128, 128, 0.878)
-}
-.entrees {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.entrees p:first-child{
-  
-  align-items: flex-start;
-  text-transform: uppercase;
-  /* margin-left: 5%; */
-  /* margin-top: 0; */
-  width: 95%;
-  /* background-color: #fff; */
-}
-
-.plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.plats p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-.desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.desserts p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-
-.menus-restaurants {
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
-  border-radius: 1rem;
-  display: flex;
-  margin-bottom: 5%;
-  word-wrap: normal;
-  height: 4.5rem;
-  width: 95%;
-}
-.menus-restaurants  i {
-  margin-left: 55%;
-}
-.menu-texte {
-  width: 90%;
-}
-.menu-texte h3, p{
-  margin-left: 3%;
-  line-height: 0.3;
-  /* margin: 0; */
-}
-
-.button-command {
-  background: linear-gradient(#FF79DA, #9356DC);
-  border:none;
-  border-radius: 2rem;
-  color: white;
-  height: 3rem;
-  font-weight: bold;
-  margin: 1.5rem 0 4rem 0;
-  width: 20rem;
-  /* width: 150px; */
-}
-
-
-/**************** La note enchantée Fichier HTML *******************/
-
-#la-note-enchantee {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); */
-}
-
-#la-note-enchantee img {
-  height: 50%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; */
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); */
-  z-index: 1;
-}
-#la-note{
-  display: flex;
-  padding-top: 5%;
-  /* margin-left: 5%; */
-  margin-bottom: 5%;
-  /* flex-direction: column; */
-  /* align-items: flex-start; */
-  width: 100%;
-  
-  /* background-color: violet; */
-  border-radius: 3rem 3rem 0 0;
-}
-#gout{
-  display: flex;
-  width: 90%;
-  font-size: 20px;
-  margin-left: 5%;
-  /* font-style: italic; */
-  font-family: "Shrikhand", cursive;
-  /* background-color: rgba(37, 37, 240, 0.472); */
-}
-#coeur{
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 8%;
-  width: 15%;
-  font-size: 1.5rem;
-  color: rgba(128, 128, 128, 0.878)
-}
-.entrees {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.entrees p:first-child{
-  
-  align-items: flex-start;
-  text-transform: uppercase;
-  /* margin-left: 5%; */
-  /* margin-top: 0; */
-  width: 95%;
-  /* background-color: #fff; */
-}
-
-.plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.plats p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-.desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.desserts p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-
-.menus-restaurants {
-  position: relative;
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
-  border-radius: 1rem;
-  display: flex;
-  margin-bottom: 5%;
-  word-wrap: normal;
-  height: 4.5rem;
-  width: 95%;
-}
-.menus-restaurants  i {
-  margin-left: 55%;
-}
-.menu-texte {
-  width: 80%;
-  border-radius: 1rem 0 0 1rem ;
-  /* background-color: cyan; */
-}
-.menu-texte h3, p{
-  margin-left: 3%;
-  line-height: 0.3;
-  /* margin: 0; */
-}
-
-.menu-prix {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 4%;
-  width: 20%;
-} 
-
-.button-command {
-  background: linear-gradient(#FF79DA, #9356DC);
-  border:none;
-  border-radius: 2rem;
-  color: white;
-  height: 3rem;
-  font-weight: bold;
-  margin: 1.5rem 0 4rem 0;
-  width: 10rem;
-  /* width: 150px; */
-}
-
-.check{
-  color: white;
-  font-size: 25px;
-  background-color: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 15%;
-  /* width: 20%;  Position origin */
-  /* width: -15%; */
-  /* width: 8%; */
-  padding-right: 2rem;
-  position: absolute;
-  top: 0;
-  /* right: -20%; Position origin */
-  right: -24%;
-  border-radius: 0 1rem 1rem 0;
-  visibility: hidden;
-}
-.menus-restaurants:hover .menu-texte {
-  width: 60%;
-  border-radius: 1rem 0 0 1rem;
-}
-.menus-restaurants:hover .check{
-  visibility: visible;
-  animation: translation-gauche 0.5s ease-out forwards; 
-}
-.menus-restaurants:hover .fa-check-circle{
-  animation: rotation 0.8s ease 0.3s forwards;
-}
-
-@keyframes translation-gauche {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-  transform: translateX(-100%);
-  }
-}
-@keyframes rotation {
-  0% {
-   -webkit-transform: rotate(0);
-  }
-  100% {
-  -webkit-transform: rotate(360deg);
-  }
-}
-
-
 /* **************************************************************** */
 /* ********************* Media Query Tablette ********************* */
 /* **************************************************************** */
@@ -651,13 +400,14 @@ ul {
   /********* Exploration Restaurants Média **********/
 
 #explorer-restaurants p{
-  text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
-
+#explorer-restaurants h2 br{
+  display: none;
+}
 #button-explorer{
-  width: 24rem;
+  width: 18rem;
   text-transform: uppercase;
 } 
 
@@ -675,47 +425,37 @@ ul {
 .fonction-choix{
   height: auto;
 }
-
 #puces1 i{
-  /* position: absolute; */
+  /* display: flex; */
+  /* flex-direction: column; */
   top: 16%;
-  left: 2%;
+  left: 0.5%;
+  /* top: 2.5rem; */
+  /* left: 0.2rem; */
+  /* z-index: 2; */
 }
 #puces2 i{
-  /* position: absolute; */
+  /* position: absolute;*/ 
   top: 17%;
-  left: 53%;
+  left: 52%;
+  /* top: 2.5rem; */
+  /* left: 23.8rem; */
 }
 #puces3 i{
   /* position: absolute; */
   top: 68%;
-  left: 26%;
-}
+  left: 24%;
+} 
 /* ************ Galeries photos restaurants Média ***************/
 
 #contener-restaurants {
-  /* display: flex; */
-  /* flex-direction: column;  */
-  /* align-items: center; */
   border: 2px solid orange;
   flex-wrap: wrap; 
-}  
-
-/* #h2-resto h2{
-  flex-basis: 50%;
-  /* height: 40px; 
-}  */
+}
 .figure-card {
-  /* display: flex;  */
-  /* flex-direction: column; */
   border: 2px solid red;
-  /* width: 300px; */
   margin-top: 2rem;
-  /* margin: 0; */
   flex-wrap: wrap;
-  /* align-content: space-between; */
-  /* min-width: 45%; */
-  /* min-height: 45%; */
 }   
 .entrees {
   display: flex;
@@ -727,10 +467,7 @@ ul {
   
   align-items: flex-start;
   text-transform: uppercase;
-  /* margin-left: 5%; */
-  /* margin-top: 0; */
   width: 95%;
-  /* background-color: #fff; */
 }
 
 .plats {
@@ -764,7 +501,8 @@ ul {
   margin-bottom: 5%;
   word-wrap: normal;
   height: 4.5rem;
-  width: 95%;
+  width: 90%;
+  /* width: 95%; Taille origine */
 }
 .menus-restaurants  i {
   margin-left: 55%;
@@ -772,10 +510,9 @@ ul {
 .menu-texte {
   width: 90%;
 }
-.menu-texte h3, p{
+.menu-texte h3, .menu-texte p{
   margin-left: 3%;
   line-height: 0.3;
-  /* margin: 0; */
 }
 
 .menu-prix {
@@ -788,28 +525,16 @@ ul {
 
 
 /* *********************** Media Footer ******************* */
-footer {
-  display: flex;
-  flex-direction: column;
-  /* width: 50%; */
-  /* margin: 0; */
-}  
 footer h3{
-  margin-top: 0;
-  /* margin: auto; */
-  /* text-align: center; */
-  padding-top: 0;
-  /* padding-left: 0; */
-  font-size: 30px;
-  /* padding-bottom: 2rem; */
-  /* background-color: crimson; */
-}
+  font-size: 25px;
+} 
 footer ul, li{
     display: flex;
     justify-content: center;
     height: 3rem;
     margin-left: 1%;
-    margin-top: 0.01rem;
+    margin-top: 0.5rem;
+    /* margin-top: 0.01rem; */
 }
 
   } /* Crochet de cloture du Media Query  */
@@ -819,470 +544,135 @@ footer ul, li{
 /* **************************************************************** */
 @media (min-width: 993px) {
 
-  #fonctionnement {
-    height: 400px;
-    width: 100%;
-    flex-wrap: wrap;
-    /* font-size: rem; */
+  .logo-entete {
+    font-size: 3.5rem;
+  }
+  #explorer-restaurants p{
+    font-size: 1.4rem;
+  }
+  
+  
+  #explorer-restaurants br{
+    display: none;
+  }
+  /* #fonctionnement {
+    /* height: 400px; */
+    /* width: 100%; */
+    /* flex-wrap: wrap; */
+    /* font-size: rem; 
     justify-content: center;
     /* background-color: #f6f6f6; */
     /* display: flex; */
     /* flex-direction: column; */
-    /* background-color: red; */
-  }
+    /* background-color: red;
+  } */
+  #button-explorer{
+    width: 20rem;
+    text-transform: uppercase;
+  } 
   #fonctionnement,
   ul {
-    /* position: relative; */
-    /* display: flex; */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    /* font-style: normal; */
+    flex-direction: row; 
     width: 100vw;
-    /* justify-content: space-between; */
-    /* list-style-type: circle; */
-  }
+  } 
     
   #fonctionnement li{
     margin: 1rem;
     width: 25%;
   }
-  
-  
-  
-  
-  
-  
   #puces1 i{
-    position: absolute;
-    top: 12%;
-    left: -2%;
-    z-index: 1;
-    font-size: 30px;
-    /* color: #fff; */
-    color: #9356DC;
-    /* transform: translate(-2% -2%); */
+    top: 35%;
+    left: -0.1%;
   }
   #puces1 span{
-    /* display: inline-block; */
-    position: absolute;
-    top: 12.5%;
-    left: 0.5%;
-    z-index: 1;
-    color: white;
+    top: 0.4rem;
+    left: 0.7rem;
   }
+  #puces2 i{
+    top: 35%;
+    left: 30%;
+  }
+  #puces3 i{
+    top: 35%;
+    left: 60%;
+  }
+  
+  #contener-restaurants{
+    background-color: orange;
+    /* margin: 0; */
+  }
+  
+  #contener-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-column-gap: 20px; */
+    /* grid-row-gap: 20px; */
+    justify-content: center;
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* background-color: crimson; */
+  }
+#h2-resto{
+  background-color: skyblue;
+  grid-template-rows: 1rem;
+  height: 2rem;
+  grid-row: 1/2;
+  grid-column: 1/-1;
+}
+.figcap-flex{
+  /* width: 100%; */
+  height: 5rem;
+}
+.figcap-flex h3{
+  margin-top: 0.5rem;
+}
+.figcap-flex p{
+  margin-top: 0.5rem; 
+} 
+/* ****************** Média Footer Desktop ********************/
+footer{
+  padding-bottom: 3rem;
+
+}
+.logo-footer{
+  width: 25%;
+  text-align: center;
+  margin-left: 29%;
+  /* padding-left: 20px; */
+  font-size: 40px;
+} 
+footer ul, li{
+    display: flex;
+    justify-content: space-around;
+    /* height: 5rem; */
+    margin-left: 1rem;
+}
+
+
+
 } /* crochet de fermeture du Média query */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* ********* Restaurant La palette du gout Fichier HTML *************
-
-#palette-du-gout {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); 
-}
-#palette-du-gout img {
-  height: 50%;
-  object-fit: cover;
-  /* object-position: 40% 40%; */
-  /* object-position: center; 
-  width: 100%;
-}
-
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; 
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); 
-  z-index: 1;
-}
-#palette{
-  display: flex;
-  padding-top: 5%;
-  /* margin-left: 5%; 
-  margin-bottom: 5%;
-  /* flex-direction: column; */
-  /* align-items: flex-start; 
-  width: 100%;
-  
-  /* background-color: violet; 
-  border-radius: 3rem 3rem 0 0;
-}
-#gout{
-  display: flex;
-  width: 90%;
-  font-size: 20px;
-  margin-left: 5%;
-  /* font-style: italic; 
-  font-family: "Shrikhand", cursive;
-  /* background-color: rgba(37, 37, 240, 0.472); 
-}
-
-#coeur{
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 8%;
-  width: 15%;
-  font-size: 1.5rem;
-  color: rgba(128, 128, 128, 0.878)
-}
-.entrees {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.entrees p:first-child{
-  
-  align-items: flex-start;
-  text-transform: uppercase;
-  /* margin-left: 5%; */
-  /* margin-top: 0; 
-  width: 95%;
-  /* background-color: #fff; 
-}
-
-.plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.plats p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-.desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.desserts p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-
-.menus-restaurants {
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
-  border-radius: 1rem;
-  display: flex;
-  margin-bottom: 5%;
-  word-wrap: normal;
-  height: 4.5rem;
-  width: 95%;
-}
-.menus-restaurants  i {
-  margin-left: 55%;
-}
-.menu-texte {
-  width: 90%;
-}
-.menu-texte h3, p{
-  margin-left: 3%;
-  line-height: 0.3;
-  /* margin: 0; 
-}
-
-.menu-prix {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 4%;
-  width: 20%;
-}
-
-.button-command {
-  background: linear-gradient(#FF79DA, #9356DC);
-  border:none;
-  border-radius: 2rem;
-  color: white;
-  height: 3rem;
-  font-weight: bold;
-  margin: 1.5rem 0 4rem 0;
-  width: 20rem;
-  /* width: 150px; 
-} */
-
-
-/**************** La note enchantée Fichier HTML *********************/
-
-/* #la-note-enchantee {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); 
-}
-
-#la-note-enchantee img {
-  height: 50%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; 
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); 
-  z-index: 1;
-}
-#la-note{
-  display: flex;
-  padding-top: 5%;
-  /* margin-left: 5%; 
-  margin-bottom: 5%;
-  /* flex-direction: column; */
-  /* align-items: flex-start; 
-  width: 100%;
-  
-  /* background-color: violet; 
-  border-radius: 3rem 3rem 0 0;
-}
-#gout{
-  display: flex;
-  width: 90%;
-  font-size: 20px;
-  margin-left: 5%;
-  /* font-style: italic; 
-  font-family: "Shrikhand", cursive;
-  /* background-color: rgba(37, 37, 240, 0.472); 
-}
-#coeur{
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 8%;
-  width: 15%;
-  font-size: 1.5rem;
-  color: rgba(128, 128, 128, 0.878)
-}
-.entrees {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.entrees p:first-child{
-  
-  align-items: flex-start;
-  text-transform: uppercase;
-  /* margin-left: 5%; */
-  /* margin-top: 0; 
-  width: 95%;
-  /* background-color: #fff; 
-}
-
-.plats {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5%;
-}
-.plats p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-.desserts {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.desserts p:first-child{
-  align-items: flex-start;
-  text-transform: uppercase;
-  width: 95%;
-}
-
-.menus-restaurants {
-  background-color: #fff;
-  box-shadow: 2px 2px 2px 4px rgba(128, 128, 128, 0.103);
-  border-radius: 1rem;
-  display: flex;
-  margin-bottom: 5%;
-  word-wrap: normal;
-  height: 4.5rem;
-  width: 95%;
-}
-.menus-restaurants  i {
-  margin-left: 55%;
-}
-.menu-texte {
-  width: 90%;
-}
-.menu-texte h3, p{
-  margin-left: 3%;
-  line-height: 0.3;
-  /* margin: 0; 
-}
-
-.menu-prix {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-bottom: 4%;
-  width: 20%;
-}
-
-.button-command {
-  background: linear-gradient(#FF79DA, #9356DC);
-  border:none;
-  border-radius: 2rem;
-  color: white;
-  height: 3rem;
-  font-weight: bold;
-  margin: 1.5rem 0 4rem 0;
-  width: 10rem;
-  /* width: 150px; 
-} */
-
-/*********************** à la Française Fichier HTML **************/
-
-#a-la-francaise {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); */
-}
-#a-la-francaise img {
-  height: 50%;
-  object-fit: cover;
-  width: 100%;
-}
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; 
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; */
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); */
-  z-index: 1;
-}  
-/*********************** délices des sens Fichier HTML ************/
-#delices-des-sens {
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  /* top: 100px; */
-  /*left: 100px; */
-  /*transform: translate( -50px, -300px); */
-}
-#delices-des-sens img {
-  height: 50%;
-  object-fit: cover;
-  width: 100%;
-}
-.fond-couleur {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-  background-color: #f0f0f0;
-  position: relative;
-  /* top: 350px; */
-  /* top: 50%; */
-  top: 42vh;
-  width: 100%;
-  height: auto;
-  border-radius: 3rem 3rem 0 0;
-  /* transform: translate(0, 300px); */
-  z-index: 1;
-}
 /************************* pied de page ***************************/
 
 footer {
   background-color: #020202;
   color: #fff;
-  /* position: relative; */
-  /* top: 800px; */
-  /* top: 140vh; */
-  /* top: 140%; */
   width: 100%;
   height: 12rem;
   /* z-index: 3; */
 }
 /* Description (.footer-next pour les restaurants sauf index.html) */
-.footer-next {
-  background-color: #020202;
-  color: #fff;
-  position: relative;
-  /* top: 300px; */
-  top: 40vh;
-  /* top: 200%; */
-  width: 100%;
-  /* z-index: 3; */
-}
-.footer-next h3{
-  padding-bottom: 0.5rem;
-}
+
 .logo-footer {
+  margin-top: 15%;
   font-family: "Shrikhand", cursive;
   padding-top: 5%;
   margin-left: 5%;
 }
 .logo-footer,
 ul {
-  /* font-family: "Roboto" sans-serif; */
-  /* font-style: normal; */
   margin-left: 5%;
   padding-left: 0;
   line-height: 1.5;
@@ -1290,11 +680,16 @@ ul {
 .fa-utensils {
   margin-right: 10px;
 }
-fa-handshake-angle,
-fa-xs {
+.fa-handshake-angle
+.fa-xs {
   margin-left: 25px;
   font-size: 0.1rem;
-  /* width: 0.01rem; */
-  /* height: 0.01rem; */
 }
-
+.active{
+  color: white;
+  text-decoration: none;
+}
+.active:hover{
+  color: #99E2D0;
+  /* color: white; */
+}
