@@ -42,15 +42,22 @@
         </section>
       
         <section id="fonctionnement">
+			<h2>Fonctionnement</h2>
             <div id="contenereur-F">
-                <h2>Fonctionnement</h2>
-                <ul>
-              <div id="puces1">
-                <i class="fa-solid fa-circle"><span>1</span></i>
+                <!-- <ul> -->
+					<!-- modèle div pour liste fonctionnement  -->
+					<div class="puces">
+						<p>1</p>
+						<i class="fa-solid fa-mobile-screen-button"></i>
+						<p>Choisissez un restaurant</p>
+					</div>
+              
+					<div >
+                <i id="puces1" class="fa-solid fa-circle">1</i>
               </div>
-              <li class="fonction-choix">
-                <i class="fa-solid fa-mobile-screen-button"></i><span>Choisissez un restaurant</span>
-                </li>
+              <div class="fonction-choix">
+                <i class="fa-solid fa-mobile-screen-button"></i>Choisissez un restaurant
+			  </div>
                 
                 <div id="puces2">
                     <i class="fa-solid fa-circle"><span>2</span></i>
@@ -61,7 +68,7 @@
                   <i class="fa-solid fa-circle"><span>3</span></i>
                 </div>
                   <li class="fonction-choix"><i class="fa-solid fa-store"></i><span>Dégustez au restaurant</span></li>
-            </ul>
+            <!-- </ul> -->
         </div>
         </section>
 
@@ -80,8 +87,11 @@
                   </div>
                   <div class="items"><p>Ménilmontant</p>
                     </div> 
-                    <div class="items"><i class="fa-solid fa-regular fa-heart"></i>
-              </div>
+                    <div class="items">
+						<i class="far fa-heart coeur-vide">
+						<i class="fas fa-heart coeur-plein"></i>
+						</i>
+              		</div>
               </figcaption> 
             </figure>
           </a>
@@ -95,7 +105,7 @@
                 alt="la-note-enchantée"
                 />
                 <span>nouveau</span>
-                  <figcaption class="figcap-flex">
+					<figcaption class="figcap-flex">
                       <div class="items">
                             <h3>La note enchantée </h3> 
                         </div>
@@ -103,10 +113,11 @@
                             <p>Charonne</p>
                         </div>
                       <div class="items">
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="far fa-heart coeur-vide">
+						<i class="fas fa-heart coeur-plein"></i>
+						</i>
                       </div>
-                        </figcaption>
+                	</figcaption>
             </figure>
           </a>
         <!-- </div>  -->
@@ -149,7 +160,11 @@
                 <div class="items">
                     <p>Folie-Méricourt</p>
                 </div>
-                <div class="items"><i class="fa-regular fa-heart"></i></div>
+                <div class="items">
+					<i class="far fa-heart coeur-vide">
+					<i class="fas fa-heart coeur-plein"></i>
+				  </i>
+				</div>
               </figcaption>
             </figure>
           </a>

@@ -57,16 +57,11 @@ ul {
     height: 100%;
     width: 100%;
 }
-
 .entete img {
     height: 50%;
-    /* object-fit: scale-down; */
-    /* object-fit: calc(); */
     object-position: 25% 25%;
-    /* object-position: center ; */
     width: 100%;
 }
-
 .fond-couleur {
     background-color: #f7f7f7;
     position: relative;
@@ -91,9 +86,6 @@ ul {
 }
 .menu-texte {
     margin-top: 2%;
-    /* line-height: 0.5; */
-    /* animation-name: menu; */
-    /* animation-duration: 2s; */
 } 
 
 @keyframes menu{
@@ -119,29 +111,50 @@ ul {
     font-family: "Shrikhand", cursive;
 }
 .coeur {
-    /* position: relative; */
     display: flex;
     align-items: flex-end;
     margin-right: 6%;
     margin-bottom: 8%;
-    /* background-color: green; */
-    /* width: 15%; */
     font-size: 1.8rem;
-    color: rgba(128, 128, 128, 0.878)
+    /* color: rgba(128, 128, 128, 0.878) */
 }
-.coeur i, .fa-heart{
+.coeur-vide:hover .coeur-plein{
+    opacity: 1;
+}
+.coeur-vide:hover{
+    color: #f7f7f7;
+}
+.coeur-vide{
+    position: relative;
+    color: #020202
+}
+  .coeur-plein{
+    color: transparent;
+    background: linear-gradient(#9356DC, #FF79DA);
+    transform-origin: bottom;
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition-duration: 1s;
+    position: absolute;
+    right: 0;
+    bottom: 0; 
+}
+/* .coeur, i { */
     /* position: absolute; */
     /* top: 1.5rem; */
     /* right: 1rem; */
-    /* margin: 0; */
+    /* margin: 0; 
     color: red;
     background: cornflowerblue
 
-    /* background-color: burlywood; */
+    /* background-color: burlywood;
 }
 .coeur > i:active{
     background: #99E2D0;
-}
+}*/
 
 .entrees {
     position: relative;
