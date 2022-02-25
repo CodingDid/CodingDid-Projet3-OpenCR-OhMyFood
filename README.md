@@ -2,6 +2,20 @@
 
 Projet sur la Formation de OpenClassRoom Projet-3 --> Réalisation Site "OhMyFood"
 
+Maquette IMAGE "OhMyFood"
+
+![Prj-OhmyFood](https://user-images.githubusercontent.com/93205678/155766049-ef0f453f-6a32-4380-a766-af51189456f1.jpeg)
+
+
+
+
+
+
+
+
+
+
+
 
 ## Technologies logiciels et languages utilisés
 
