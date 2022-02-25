@@ -6,13 +6,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 255, 0.397);
   }
-  main {
-    /* background-color: rgb(129, 212, 129); */
+main {
+    height: 100%;
     font-family: "Roboto", sans-serif;
   }
-  section {
+section {
     width: 100%;
     margin: 0;
   }
@@ -31,20 +30,14 @@ ul {
     background-color: #99E2D0;
   }
 
-  /* ************************************************ */
+  /* *************** ENTÊTE ********************************* */
 .retour {
-    /* display: flex; */
-    /* justify-content: center; */
     width: 100%;
-    /* margin-left: 40px;   */
-    /* background-color: rgba(255, 127, 80, 0.342); */
-    /* border: 2px solid black;*/ 
   }
 .logo-entete-next {
     font-family: "Shrikhand", cursive;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    /* text-align: center; */
 }
 .fa-arrow-left {
     color: black;
@@ -60,6 +53,7 @@ ul {
 .entete img {
     height: 50%;
     object-position: 25% 25%;
+    object-fit: cover;
     width: 100%;
 }
 .fond-couleur {
@@ -78,11 +72,10 @@ ul {
     width: 100%;
     border-radius: 3rem 3rem 0 0;
 }
-
 .menus-restaurants{
     animation-name: menu;
     animation-duration: 2s;
-
+    cursor: pointer;
 }
 .menu-texte {
     margin-top: 2%;
@@ -116,7 +109,6 @@ ul {
     margin-right: 6%;
     margin-bottom: 8%;
     font-size: 1.8rem;
-    /* color: rgba(128, 128, 128, 0.878) */
 }
 .coeur-vide:hover .coeur-plein{
     opacity: 1;
@@ -128,9 +120,9 @@ ul {
     position: relative;
     color: #020202
 }
-  .coeur-plein{
+.coeur-plein{
     color: transparent;
-    background: linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient(#FF79DA, #9356DC);
     transform-origin: bottom;
     background-size: cover;
     background-position: center;
@@ -142,33 +134,17 @@ ul {
     right: 0;
     bottom: 0; 
 }
-/* .coeur, i { */
-    /* position: absolute; */
-    /* top: 1.5rem; */
-    /* right: 1rem; */
-    /* margin: 0; 
-    color: red;
-    background: cornflowerblue
-
-    /* background-color: burlywood;
-}
-.coeur > i:active{
-    background: #99E2D0;
-}*/
-
 .entrees {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding-bottom: 5%; */
 }
 .entrees p:first-child{
     align-items: flex-start;
     text-transform: uppercase;
     margin-bottom: 25px;
     width: 95%;
-
 } 
 .entrees > p::after {
     content: "";
@@ -262,8 +238,6 @@ ul {
 .button-command {
     background-image:  linear-gradient(to bottom, #FF79DAB3, #9356DCB3);
     box-shadow: 1px 1px 14px -3px #000000b2;
-    /* box-shadow: 1px 1px 16px -3px #000000; */
-    /* background: linear-gradient(#FF79DA, #9356DC); */
     border:none;
     border-radius: 2rem;
     color: white;
@@ -335,8 +309,6 @@ footer {
 .logo-footer{
     font-family: "Shrikhand", cursive;
     padding-top: 5%;
-    /* margin-left: 5%; */
-    /* margin-bottom: 0; */
 }
 .logo-footer,
 ul {
@@ -365,12 +337,12 @@ ul {
     justify-content: space-around;
     font-size: 3rem;
     margin-right: 30%;
-  }
+}
 .logo-entete-next i{
     font-size: 30px;  
     margin-left: 0;
     margin-bottom: 2rem;
-  }
+}
 
 /*********** Menu restaurants *************/
 .gout h2{
@@ -386,11 +358,9 @@ ul {
 .entrees p:first-child{
     margin-left: 2rem;
 }
-
 .entrees > p::after {
     left: 2.2rem;
 }
-
 .plats p:first-child{
     margin-left: 2rem;
 }
@@ -411,18 +381,17 @@ ul {
 }
 
 /********* Média Query tablette pied de page *****************/
-.logo-footer{
+/* .logo-footer{
     font-size: 30px;
     margin-left: 4rem;
 }
-  
 footer ul, li{
     display: flex;
     justify-content: space-evenly;
     height: 4rem;
     margin-right: 1.5rem;
     margin-top: 0.01rem;
-  }
+  } */
       }  /* crochet fermeture media query */
 
 /* **************************************************************** */
@@ -431,74 +400,96 @@ footer ul, li{
 @media (min-width: 993px) {
 
 /*********** Média Query Desktop Entête Restaurants ****************/
-  .logo-entete-next {
+.logo-entete-next {
     display: flex;
-    justify-content: space-around;
-    font-size: 3rem;
-    margin-right: 30%;
-  }
+    justify-content: flex-start;
+    font-size: 2.5rem;
+    height: 3rem;
+    margin-bottom: 1.25rem;
+}
 .logo-entete-next i{
     font-size: 30px;  
     margin-left: 0;
     margin-bottom: 2rem;
-  }
+}
+.fa-arrow-left {
+    margin-right: 50rem;
+    padding-left: 5%;
+    font-size: 22px;
+} 
+.entete img {
+    height: 45%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .fond-couleur{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 95%;
+    margin: auto;
 }
 .nom-restaurant{
     grid-row: 1 / 2;
     grid-column: 1 / -1;
 }
-
-.gout h2{
+.gout{
+    margin-bottom: 2rem;
+}
+.button-command {
+    margin-right: 200%;
+  }
+.gout h2 {
     font-size: 2.5rem;
 }
-.coeur{
+.coeur {
     margin: 0 10% 5% 0;
     font-size: 40px;
 }
-/* .menus-restaurants{
-    width: 90%;
-} */
-.entrees p:first-child{
-    width: 65%;
+.entrees p:first-child {
     margin-left: auto;
-    /* margin-left: 6rem; */
-}
+} 
 .entrees p::after {
-    margin-left: 34.5%;
+    margin-left: 4%;
+    left: 0.5rem;
 }
-
-.plats p:first-child{
-    width: 65%;
+.plats p:first-child {
     margin-left: auto;
-    /* margin-left: 6rem; */
 }
 .plats p::after {
-    margin-left: 34.5%;
+    left: 2rem;
 }
-
 .desserts p:first-child{
-    width: 65%;
     margin-left: auto;
-    /* margin-left: 6rem; */
 }
 .desserts p::after {
-    margin-left: 34.5%;
+    left: 2rem;
 }
+.check{
+    width: 11%;
+    right: -18%;
+}
+.menu-texte P{
+    margin-bottom: 4%;
+}
+
 /********* Média Query Desktop pied de page *****************/
-.logo-footer{
-    font-size: 30px;
-    margin-left: 4rem;
+/* footer{
+    /* height: 13rem; */
+    /* padding-bottom: 1rem; 
+  } */
+.logo-footer{ 
+    padding-top: 0;
+    /* width: 25%; */
+    /* font-size: 40px; */
+    /* margin-left: 17%; */
 }
-  
-footer ul, li{
+/* footer ul, li{ 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 4rem;
     margin-right: 1.5rem;
     margin-top: 0.01rem;
-  }
+}*/
 } /* crochet fermeture media query */
 
