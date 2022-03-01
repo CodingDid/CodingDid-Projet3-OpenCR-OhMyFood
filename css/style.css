@@ -8,13 +8,27 @@ body {
   box-sizing: border-box;
 }
 main{
-  height: 100%;
+  width: 100%;
   font-family: "Roboto", sans-serif;
 }
 section{
   width: 100%;
-  height: 100%;
 }
+ul {
+  list-style: none;
+}
+
+/* Couleurs Maquette */
+#primaire {
+  background-color: #9356DC;
+}
+#secondaire {
+  background-color: #FF79DA;
+}
+#tertiaire {
+  background-color: #99E2D0;
+}
+/* ********************************************* */
 .contener-spin{
   position: absolute;
   width: 100%;
@@ -23,7 +37,7 @@ section{
   animation: z-index 3s linear forwards;
 }
 #loader-spin{
-  /* création des dimenssion SPIN  */
+  /* création des dimension SPIN  */
   border: 10px solid grey; 
   border-radius: 50%;
   border-top: 10px solid #9356DC;
@@ -42,7 +56,7 @@ section{
   top: 0; left: 0; right: 0; bottom: 0;
 } 
 
-/********* Keyframes Animation ************/
+/********* Keyframes Animations ************/
 @keyframes rotation {
   0%{
     transform: rotate(0deg);
@@ -73,27 +87,6 @@ section{
   }
 }
 
-main {
-  font-family: "Roboto", sans-serif;
-}
-section {
-  width: 100%;
-}
-ul {
-  list-style: none;
-}
-
-/* Couleurs Maquette */
-#primaire {
-  background-color: #9356DC;
-}
-#secondaire {
-  background-color: #FF79DA;
-}
-#tertiaire {
-  background-color: #99E2D0;
-}
-
 /*********************** ENTÊTE Accueil *****************************/
 .retour {
   width: 100%;
@@ -117,7 +110,7 @@ ul {
 #explorer-restaurants {
   text-align: center;
   background-color: #f7f7f7;
-  height: 24rem;
+  height: 26rem;
   width: 100%;
 }
 #explorer-restaurants i {
@@ -150,7 +143,7 @@ ul {
   color: white;
   font-weight: bold;
   height: 3.5rem;
-  margin-top: 1.8rem;
+  margin-top: 1.4rem;
   width: 14rem;
   margin-left: auto;
 }
@@ -181,6 +174,7 @@ ul {
   width: 95%;
   height: 5rem;
   border-radius: 1.5rem;
+  box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
 #puce1 #nombre1{
@@ -221,6 +215,7 @@ ul {
   width: 95%;
   height: 5rem;
   border-radius: 1.5rem;
+  box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
 #puce2 #nombre2{
@@ -261,6 +256,7 @@ ul {
   width: 95%;
   height: 5rem;
   border-radius: 1.5rem;
+  box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
 #puce3 #nombre3{
@@ -323,18 +319,19 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  padding-bottom: 16%;
   background-color: #f7f7f7;
 } 
 #contener-bis{
   width: 100%;
 }
 #h2-resto {
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-left: 1.5rem;
   align-items: flex-start;
   width: 100%;
 }
-#contener-restaurants  a{
+#contener-restaurants a {
   width: 100%;
   padding-bottom: 0;
   text-decoration: none;
@@ -422,6 +419,41 @@ ul {
   bottom: 0; 
 }
 
+/************************* pied de page ***************************/
+footer {
+  background-color: #020202;
+  color: #fff;
+  width: 100%;
+  height: 12rem;
+}
+.logo-footer {
+  margin-top: 0;
+  font-family: "Shrikhand", cursive;
+  padding-top: 5%;
+  margin-left: 5%;
+}
+.logo-footer,
+ul {
+  margin-left: 5%;
+  padding-left: 0;
+  line-height: 1.5;
+}
+.fa-utensils {
+  margin-right: 10px;
+}
+.fa-handshake-angle
+.fa-xs {
+  margin-left: 25px;
+  font-size: 0.1rem;
+}
+.active{
+  color: white;
+  text-decoration: none;
+}
+.active:hover{
+  color: #99E2D0;
+}
+
 /* **************************************************************** */
 /* ********************* Media Query Tablette ********************* */
 /* **************************************************************** */
@@ -507,20 +539,15 @@ ul {
   margin-bottom: 4%;
   width: 20%;
 }
-
-
-/* *********************** Media Footer ******************* */
-/* footer h3{
-  font-size: 25px;
-} 
-footer ul, li{
-    display: flex;
-    justify-content: space-around;
-    height: 3rem;
-    margin-left: 1%;
-    margin-top: 0.5rem;
-} */
-
+  /************* Média query pied de page  ********************/
+.logo-footer{
+  font-family: "Shrikhand", "cursive";
+  padding-top: 2%;
+}
+.logo-footer,
+ul {
+  margin-left: 2.5%;
+}
   } /* Crochet de cloture du Media Query  */
 
 /* **************************************************************** */
@@ -529,40 +556,40 @@ footer ul, li{
 @media (min-width: 993px) {
 
 #explorer-restaurants p{
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 #explorer-restaurants br{
-    display: none;
+  display: none;
 }
 #button-explorer{
-    width: 20rem;
-    text-transform: uppercase;
+  width: 20rem;
+  text-transform: uppercase;
 } 
 #tr-fonction{
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 #fonctionnement{
-    display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 10% 10%;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 10rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 10% 10%;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 10rem;
 }
 .couleur {
-    justify-content: flex-end;
-    margin-left: 1rem;
+  justify-content: flex-end;
+  margin-left: 1rem;
 }
 #contener-restaurants {
-    height: 60rem;
+  padding-bottom: 10%;  
 }
 #contener-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 40%);
-    grid-template-rows: 0.4fr 2fr;
-    row-gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: 0.4fr 2fr;
+  gap: 3rem 1rem; 
+  justify-content: center;
+  flex-wrap: wrap;
 }
 #h2-resto {
   grid-template-rows: 1rem;
@@ -581,58 +608,15 @@ footer ul, li{
 } 
 
 /* ****************** Média Footer Desktop ********************/
-footer{
-  padding-bottom: 3rem;
-}
-/* .logo-footer{ 
-  width: 25%;
-  text-align: center;
-  margin-left: 29%;
-  /* padding-left: 20px; 
-  font-size: 40px;
-} 
-footer ul, li{
-    display: flex;
-    justify-content: space-around;
-    /* height: 5rem; 
-    margin-left: 1rem;
-} */
-
-} /* crochet de fermeture du Média query */
-
-/************************* pied de page ***************************/
-footer {
-  background-color: #020202;
-  color: #fff;
-  width: 100%;
-  height: 12rem;
-}
-/* Description (.footer-next pour les restaurants sauf index.html) */
-
-.logo-footer {
-  margin-top: 15%;
-  font-family: "Shrikhand", cursive;
-  padding-top: 5%;
-  margin-left: 5%;
+.logo-footer{
+  font-family: "Shrikhand", "cursive";
+  padding-top: 2%;
 }
 .logo-footer,
 ul {
-  margin-left: 5%;
-  padding-left: 0;
-  line-height: 1.5;
-}
-.fa-utensils {
-  margin-right: 10px;
-}
-.fa-handshake-angle
-.fa-xs {
-  margin-left: 25px;
-  font-size: 0.1rem;
-}
-.active{
-  color: white;
-  text-decoration: none;
-}
-.active:hover{
-  color: #99E2D0;
-}
+  margin-left: 2%;
+}  
+  } /* crochet de fermeture du Média query */
+
+
+
