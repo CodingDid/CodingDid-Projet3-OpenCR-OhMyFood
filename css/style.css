@@ -3,12 +3,12 @@
 /* PARAMÈTRES GÉNÉRAUX  */
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
 main{
+  margin-top: 0;
   width: 100%;
+  height: 100%;
   font-family: "Roboto", sans-serif;
 }
 section{
@@ -31,19 +31,18 @@ ul {
 /* ********************************************* */
 .contener-spin{
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
-  animation: z-index 3s linear forwards;
+  animation: z-index 1s linear forwards;
 }
 #loader-spin{
   /* création des dimension SPIN  */
-  border: 10px solid grey; 
   border-radius: 50%;
-  border-top: 10px solid #9356DC;
-  border-right: 10px solid #FF79DA;
-  border-bottom: 10px solid #9356DC;
-  border-left: 10px solid #99E2D0;
+  border: 10px solid #9356DC;
+  border-right-color: #FF79DA;
+  border-left-color: #99E2D0;
   width: 10rem;
   height: 10rem;
   animation: rotation 1s linear backwards;
@@ -333,6 +332,8 @@ ul {
 }
 #contener-restaurants a {
   width: 100%;
+  height: auto;
+  max-width: 12rem;
   padding-bottom: 0;
   text-decoration: none;
   color: black;
@@ -343,8 +344,8 @@ ul {
   flex-direction: column;
   position: relative;
   width: 90%;
-  margin: auto;
-  margin-top: 1.5rem;
+  height: 100%;
+  margin: 1.5rem auto auto;
   border-radius: 1rem;
   background-color: #fff;
 }
@@ -370,11 +371,10 @@ ul {
 }
 .figcap-flex{
   width: 97%;
+  height: 30%;
   display: flex;
-  flex-flow: column wrap;
   padding-left: 0.5rem;
   border-radius: 0 0 1rem 1rem;
-  height: 13vh; /* A modifier lors du Break point media Query*/
 }  
 .figcap-flex h3 {
   margin-left: 0.5rem;
@@ -382,15 +382,18 @@ ul {
 .figcap-flex p{
   margin: 0.5rem 0 0 0.5rem;
 }
-.figcap-flex i {
-  margin-left: 70%; 
-  margin-top: 1rem;
-  flex-wrap: nowrap; 
-  font-size: 2rem;
+.content-card{
+  width: 90%;
+  height: 100%;
+  margin-bottom: 2%;
 }
-.items{
-  width: 50%;
-  height: 2.5rem;
+.coeur-card{
+  width: 10%;
+  height: 100%;
+}
+.coeur-card i{
+  margin-top: 1rem;
+  font-size: 1.6rem;
 }
 .coeur-vide:hover .coeur-plein{
   opacity: 1;
@@ -405,10 +408,9 @@ ul {
 }
 .coeur-plein{
   color: transparent;
-  background: linear-gradient(#9356DC, #FF79DA);
   transform-origin: bottom;
   background-size: cover;
-  background-position: center;
+  background: linear-gradient(#9356DC, #FF79DA) center;
   background-clip: text;
   -webkit-background-clip: text;
   transition-duration: 1s;
@@ -441,8 +443,7 @@ ul {
 .fa-utensils {
   margin-right: 10px;
 }
-.fa-handshake-angle
-.fa-xs {
+.fa-handshake-angle .fa-xs {
   margin-left: 25px;
   font-size: 0.1rem;
 }
@@ -458,7 +459,6 @@ ul {
 /* ********************* Media Query Tablette ********************* */
 /* **************************************************************** */
 @media (min-width: 768px) and (max-width: 992px) {
-
   /********* Exploration Restaurants Média **********/
 
 #explorer-restaurants p{
@@ -475,6 +475,9 @@ ul {
 /* ************ Galeries photos restaurants Média ***************/
 #contener-restaurants {
   flex-wrap: wrap; 
+}
+#h2-resto {
+  margin-left: 5%;
 }
 .figure-card {
   margin-top: 2rem;
@@ -554,21 +557,31 @@ ul {
 /* ********************* Media Query Desktop ********************* */
 /* **************************************************************** */
 @media (min-width: 993px) {
-
-#explorer-restaurants p{
+  .a-ref-cards{
+    width: 50%;
+  }
+  /* Correctif position icone Fonctionnement */
+  #puce1, #puce2, #puce3{
+    display: flex;
+    justify-content: normal;
+  }
+  .puce-texte{
+    margin-left: 22%;
+  }
+  #explorer-restaurants p{
   font-size: 1.4rem;
 }
-#explorer-restaurants br{
+  #explorer-restaurants br{
   display: none;
 }
-#button-explorer{
+  #button-explorer{
   width: 20rem;
   text-transform: uppercase;
 } 
-#tr-fonction{
+  #tr-fonction{
   margin-top: 2rem;
 }
-#fonctionnement{
+  #fonctionnement{
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: 10% 10%;
@@ -581,21 +594,20 @@ ul {
   margin-left: 1rem;
 }
 #contener-restaurants {
-  padding-bottom: 10%;  
+  padding-bottom: 10%;
 }
-#contener-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 40%);
-  grid-template-rows: 0.4fr 2fr;
-  gap: 3rem 1rem; 
+  /* mise en place de la grid d'origine*/
+#contener-bis {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 #h2-resto {
   grid-template-rows: 1rem;
   height: 2rem;
   grid-row: 1/2;
   grid-column: 1/-1;
+  margin-left: 5%;
 }  
 .figcap-flex{
   height: 5rem;
@@ -605,8 +617,11 @@ ul {
 }
 .figcap-flex p{
   margin-top: 0.5rem; 
-} 
-
+}
+.coeur-card i{
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
 /* ****************** Média Footer Desktop ********************/
 .logo-footer{
   font-family: "Shrikhand", "cursive";
