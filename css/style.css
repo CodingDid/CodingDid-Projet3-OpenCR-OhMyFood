@@ -5,7 +5,7 @@
 body {
   overflow-x: hidden;
 }
-main{
+main {
   margin-top: 0;
   width: 100%;
   height: 100%;
@@ -29,7 +29,7 @@ ul {
   background-color: #99E2D0;
 }
 /* ********************************************* */
-.contener-spin{
+.contener-spin {
   position: absolute;
   top: 0;
   width: 100%;
@@ -37,7 +37,7 @@ ul {
   background-color: #fff;
   animation: z-index 1s linear forwards;
 }
-#loader-spin{
+#loader-spin {
   /* création des dimension SPIN  */
   border-radius: 50%;
   border: 10px solid #9356DC;
@@ -62,14 +62,14 @@ ul {
     opacity: 0;
     visibility: visible;
   }
-100%{
+100% {
     transform: rotate(360deg);
     opacity: 1;
   }
 }
 
 @keyframes z-index {
-  0%{
+  0% {
     z-index: 30;
   }
   100%{
@@ -78,7 +78,7 @@ ul {
 }
 
 @keyframes opacity {
-  0%{
+  0% {
       opacity: 1;
   }
   100%{
@@ -95,7 +95,7 @@ ul {
   font-size: 2rem;
   text-align: center;
 }
-.logo-next{
+.logo-next {
   width: 100%;
 }
 .logo-entete-next {
@@ -126,7 +126,7 @@ ul {
   margin-top: 3rem;
   margin-bottom: 0;
 }
-#explorer-restaurants p:nth-child(n+2){
+#explorer-restaurants p:nth-child(n+2) {
   /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
   font-size: 18px;
   line-height: 1.5;
@@ -146,14 +146,14 @@ ul {
   width: 14rem;
   margin-left: auto;
 }
-#button-explorer:hover{
+#button-explorer:hover {
   transform: scale(1.01);
   opacity: 0.9;  
   cursor: pointer;
 }
 
 /****************** section fonctionnement Accueil *****************/
-#tr-fonction{
+#tr-fonction {
   margin-top: 15%;
   margin-left: 5%;
 }
@@ -176,7 +176,7 @@ ul {
   box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
-#puce1 #nombre1{
+#puce1 #nombre1 {
   position: absolute;
   justify-content: start;
   flex-wrap: nowrap;
@@ -187,7 +187,7 @@ ul {
   font-weight: bold;
   z-index: 2;
 }
-#puce1 .fa-circle{
+#puce1 .fa-circle {
   position: absolute;
   justify-content: flex-start;
   top: 1.7rem;
@@ -201,7 +201,7 @@ ul {
   top: 1.7rem;
   left: 2rem;
 }
-#puce1 p{
+#puce1 p {
   display: flex;
   justify-content: center;
   margin-top: 1.8rem;
@@ -217,7 +217,7 @@ ul {
   box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
-#puce2 #nombre2{
+#puce2 #nombre2 {
   position: absolute;
   justify-content: start;
   flex-wrap: nowrap;
@@ -228,7 +228,7 @@ ul {
   font-weight: bold;
   z-index: 2;
 }
-#puce2 .fa-circle{
+#puce2 .fa-circle {
   position: absolute;
   justify-content: flex-start;
   top: 1.7rem;
@@ -237,12 +237,12 @@ ul {
   flex-wrap: nowrap;
   font-size: 25px;
 } 
-#puce2 .fa-list-ul{
+#puce2 .fa-list-ul {
   position: absolute;
   top: 1.7rem;
   left: 2rem;
 }
-#puce2 p{
+#puce2 p {
   display: flex;
   justify-content: center;
   margin-top: 1.8rem;
@@ -258,7 +258,7 @@ ul {
   box-shadow: .22rem .22rem .5rem rgba(0, 0, 0, .14);
   background-color: #f7f7f7;
 }
-#puce3 #nombre3{
+#puce3 #nombre3 {
   position: absolute;
   justify-content: start;
   flex-wrap: nowrap;
@@ -269,7 +269,7 @@ ul {
   font-weight: bold;
   z-index: 2;
 }
-#puce3 .fa-circle{
+#puce3 .fa-circle {
   position: absolute;
   justify-content: flex-start;
   top: 1.7rem;
@@ -278,36 +278,36 @@ ul {
   flex-wrap: nowrap;
   font-size: 25px;
 } 
-#puce3 .fa-store{
+#puce3 .fa-store {
   position: absolute;
   top: 1.7rem;
   left: 2rem;
 }
-#puce3 p{
+#puce3 p {
   display: flex;
   justify-content: center;
   margin-top: 1.8rem;
   font-size: 18px;
 }
-.couleur:hover i{
+.couleur:hover i {
   color: #9356DC;
 }
-#puce1:hover{
+#puce1:hover {
   background-color: #9256dc21;
 } 
-#puce2:hover{
+#puce2:hover {
   background-color: #9256dc21;
 }
-#puce3:hover{
+#puce3:hover {
   background-color: #9256dc21;
 }
-.couleur:hover{
+.couleur:hover {
   transform: translate(3px); 
   background-color: #9256dcc4;
   box-shadow: 2px 1px 1px grey;
   cursor: pointer;
 }
-.couleur i{
+.couleur i {
   margin-right: 20px;
 }
 
@@ -321,7 +321,7 @@ ul {
   padding-bottom: 16%;
   background-color: #f7f7f7;
 } 
-#contener-bis{
+#contener-bis {
   width: 100%;
 }
 #h2-resto {
@@ -356,7 +356,7 @@ ul {
   object-position: center right;
   border-radius: 1rem 1rem 0 0;
 }
-.figure-card span{
+.figure-card span {
   position: absolute;
   top: 5%;
   right: 3%;
@@ -366,10 +366,10 @@ ul {
   color: green;
   background-color: #99E2D0;
 }
-.figure-card, .card2 img{
+.figure-card, .card2 img {
   object-position: 62% 62%;
 }
-.figcap-flex{
+.figcap-flex {
   width: 97%;
   height: 30%;
   display: flex;
@@ -379,34 +379,34 @@ ul {
 .figcap-flex h3 {
   margin-left: 0.5rem;
 }
-.figcap-flex p{
+.figcap-flex p {
   margin: 0.5rem 0 0 0.5rem;
 }
-.content-card{
+.content-card {
   width: 90%;
   height: 100%;
   margin-bottom: 2%;
 }
-.coeur-card{
+.coeur-card {
   width: 10%;
   height: 100%;
 }
-.coeur-card i{
+.coeur-card i {
   margin-top: 1rem;
   font-size: 1.6rem;
 }
-.coeur-vide:hover .coeur-plein{
+.coeur-vide:hover .coeur-plein {
   opacity: 1;
 }
-.coeur-vide:hover{
+.coeur-vide:hover {
   color: white;
 }
-.coeur-vide{
+.coeur-vide {
   position: relative;
   color: #020202;
   flex-wrap: nowrap;
 }
-.coeur-plein{
+.coeur-plein {
   color: transparent;
   transform-origin: bottom;
   background-size: cover;
@@ -447,11 +447,11 @@ ul {
   margin-left: 25px;
   font-size: 0.1rem;
 }
-.active{
+.active {
   color: white;
   text-decoration: none;
 }
-.active:hover{
+.active:hover {
   color: #99E2D0;
 }
 
@@ -461,13 +461,13 @@ ul {
 @media (min-width: 768px) and (max-width: 992px) {
   /********* Exploration Restaurants Média **********/
 
-#explorer-restaurants p{
+#explorer-restaurants p {
   font-size: 1.2rem;
 }
-#explorer-restaurants h2 br{
+#explorer-restaurants h2 br {
   display: none;
 }
-#button-explorer{
+#button-explorer {
   width: 18rem;
   text-transform: uppercase;
 } 
@@ -489,7 +489,7 @@ ul {
   align-items: center;
   padding-bottom: 5%;
 }
-.entrees p:first-child{
+.entrees p:first-child {
   align-items: flex-start;
   text-transform: uppercase;
   width: 95%;
@@ -500,7 +500,7 @@ ul {
   align-items: center;
   padding-bottom: 5%;
 }
-.plats p:first-child{
+.plats p:first-child {
   align-items: flex-start;
   text-transform: uppercase;
   width: 95%;
@@ -510,7 +510,7 @@ ul {
   flex-direction: column;
   align-items: center;
 }
-.desserts p:first-child{
+.desserts p:first-child {
   align-items: flex-start;
   text-transform: uppercase;
   width: 95%;
@@ -531,7 +531,7 @@ ul {
 .menu-texte {
   width: 90%;
 }
-.menu-texte h3, .menu-texte p{
+.menu-texte h3, .menu-texte p {
   margin-left: 3%;
   line-height: 0.3;
 }
@@ -543,7 +543,7 @@ ul {
   width: 20%;
 }
   /************* Média query pied de page  ********************/
-.logo-footer{
+.logo-footer {
   font-family: "Shrikhand", "cursive";
   padding-top: 2%;
 }
@@ -557,31 +557,31 @@ ul {
 /* ********************* Media Query Desktop ********************* */
 /* **************************************************************** */
 @media (min-width: 993px) {
-  .a-ref-cards{
+  .a-ref-cards {
     width: 50%;
   }
   /* Correctif position icone Fonctionnement */
-  #puce1, #puce2, #puce3{
+  #puce1, #puce2, #puce3 {
     display: flex;
     justify-content: normal;
   }
   .puce-texte{
     margin-left: 22%;
   }
-  #explorer-restaurants p{
+  #explorer-restaurants p {
   font-size: 1.4rem;
 }
-  #explorer-restaurants br{
+  #explorer-restaurants br {
   display: none;
 }
-  #button-explorer{
+  #button-explorer {
   width: 20rem;
   text-transform: uppercase;
 } 
-  #tr-fonction{
+  #tr-fonction {
   margin-top: 2rem;
 }
-  #fonctionnement{
+  #fonctionnement {
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: 10% 10%;
@@ -609,21 +609,21 @@ ul {
   grid-column: 1/-1;
   margin-left: 5%;
 }  
-.figcap-flex{
+.figcap-flex {
   height: 5rem;
 }
-.figcap-flex h3{
+.figcap-flex h3 {
   margin-top: 0.5rem;
 }
-.figcap-flex p{
+.figcap-flex p {
   margin-top: 0.5rem; 
 }
-.coeur-card i{
+.coeur-card i {
   margin-top: 1rem;
   font-size: 1.8rem;
 }
 /* ****************** Média Footer Desktop ********************/
-.logo-footer{
+.logo-footer {
   font-family: "Shrikhand", "cursive";
   padding-top: 2%;
 }
